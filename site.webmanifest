@@ -1,0 +1,10 @@
+{
+  "name": "PinchBar",
+  "short_name": "PinchBar",
+  "icons": [
+    { "src": "assets/img/app-icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#FFFEFB",
+  "background_color": "#FFFEFB",
+  "display": "browser"
+}

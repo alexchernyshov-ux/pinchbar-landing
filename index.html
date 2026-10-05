@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>PinchBar — Transform text in a pinch. AI text actions for Mac</title>
+  <meta name="description" content="PinchBar keeps your clipboard history in the Mac menu bar and turns any text into a better version with one shortcut: fix, summarize, translate, shorten or draft a reply. By MacPaw, on Setapp.">
+  <link rel="canonical" href="https://pinchbar.app/"><!-- TODO(copy): final domain -->
+  <meta name="theme-color" content="#FFFEFB">
+  <meta name="color-scheme" content="light">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="PinchBar">
+  <meta property="og:title" content="PinchBar — Transform text in a pinch.">
+  <meta property="og:description" content="Clipboard history and 10 AI text actions in your Mac menu bar. Press Control+C, pick an action, paste the result.">
+  <meta property="og:url" content="https://pinchbar.app/">
+  <meta property="og:image" content="https://pinchbar.app/assets/img/og.png"><!-- TODO(copy): absolute URL on final domain -->
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The PinchBar panel beside the headline Transform text in a pinch.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PinchBar — Transform text in a pinch.">
+  <meta name="twitter:description" content="Clipboard history and 10 AI text actions in your Mac menu bar.">
+  <meta name="twitter:image" content="https://pinchbar.app/assets/img/og.png">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="preload" href="assets/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/hanken-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="assets/shots/panel-fix-native-460.webp" imagesrcset="assets/shots/panel-fix-native-460.webp 460w, assets/shots/panel-fix-native-690.webp 690w, assets/shots/panel-fix-native-920.webp 920w" imagesizes="(min-width: 1024px) 300px, 62vw" fetchpriority="high">
+  <link rel="stylesheet" href="assets/styles.css?v=202610051500">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "PinchBar",
+    "applicationCategory": "UtilitiesApplication",
+    "applicationSubCategory": "AI writing tools",
+    "operatingSystem": "macOS 15.6 or later",
+    "softwareVersion": "1.0.16",
+    "fileSize": "19.8MB",
+    "description": "A Mac menu bar app that keeps your clipboard history and transforms copied or selected text with AI actions: fix, clarify, summarize, translate, shorten, expand and draft replies.",
+    "url": "https://pinchbar.app/",
+    "downloadUrl": "https://setapp.com/apps/pinchbar",
+    "image": "https://pinchbar.app/assets/img/app-icon-512.png",
+    "inLanguage": "en",
+    "author": { "@type": "Organization", "name": "MacPaw", "url": "https://macpaw.com" },
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free to install on Setapp. New users get 2,500 bonus AI credits." }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="wrap nav__in">
+      <a class="brand" href="#top" aria-label="PinchBar, back to top">
+        <img src="assets/img/app-icon-64.webp" width="28" height="28" alt="">
+        <span>PinchBar</span>
+      </a>
+      <nav class="nav__links" aria-label="Main">
+        <a href="#features">Features</a>
+        <a href="#demo">Try an action</a>
+        <a href="#how">How it works</a>
+        <a href="#get">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn--sm nav__cta" href="https://account.setapp.com/get-free/apps/pinchbar">Try free <span class="btn__chip" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"/></svg></span></a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span></button>
+    </div>
+    <div class="menu" id="menu" hidden>
+      <nav class="menu__links" aria-label="Mobile">
+        <a href="#features"><span class="mono">01</span>Features</a>
+        <a href="#demo"><span class="mono">02</span>Try an action</a>
+        <a href="#how"><span class="mono">03</span>How it works</a>
+        <a href="#get"><span class="mono">04</span>Pricing</a>
+        <a href="#faq"><span class="mono">05</span>FAQ</a>
+      </nav>
+      <a class="btn" href="https://account.setapp.com/get-free/apps/pinchbar">Try PinchBar free <span class="btn__chip" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"/></svg></span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero rule-b" aria-labelledby="hero-title">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow"><span class="dot" aria-hidden="true"></span>AI text actions for your Mac menu bar</p>
+          <h1 id="hero-title" class="display">Transform text <em>in a pinch.</em></h1>
+          <p class="lead">PinchBar keeps everything you copy and turns it into a better version with one shortcut. Fix it, summarize it, translate it or draft a reply — then paste.</p>
+          <div class="ctas">
+            <a class="btn" href="https://account.setapp.com/get-free/apps/pinchbar">Try PinchBar free <span class="btn__chip" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"/></svg></span></a>
+            <a class="btn btn--ghost" href="#demo">Try an action</a>
+          </div>
+          <ul class="facts" aria-label="Key facts">
+            <li>macOS 15.6 or later</li>
+            <li>Free on Setapp</li>
+            <li>2,500 bonus AI credits</li>
+          </ul>
+        </div>
+
+        <figure class="hero__shot blush">
+          <div class="shot-pin">
+            <img class="shot" src="assets/shots/panel-fix-native-460.webp" srcset="assets/shots/panel-fix-native-460.webp 460w, assets/shots/panel-fix-native-690.webp 690w, assets/shots/panel-fix-native-920.webp 920w" sizes="(min-width: 1024px) 300px, 62vw" width="460" height="900" alt="The PinchBar panel: a copied email with typos, the action row with Fix &amp; Native selected, the corrected email below it, and the AI credit balance at the bottom." fetchpriority="high">
+            <ol class="callouts">
+              <li class="co co--l" style="--y: 22%"><span class="co__n mono">1</span><span class="co__t">Your copy history</span></li>
+              <li class="co co--r" style="--y: 36%"><span class="co__n mono">2</span><span class="co__t">Actions on <span class="nw"><kbd>⌃1</kbd>–<kbd>⌃0</kbd></span></span></li>
+              <li class="co co--l" style="--y: 47%"><span class="co__n mono">3</span><span class="co__t">The result, ready to copy</span></li>
+              <li class="co co--r" style="--y: 97.5%"><span class="co__n mono">4</span><span class="co__t">Credits left</span></li>
+            </ol>
+          </div>
+          <figcaption class="sr">PinchBar panel with four labelled parts: clipboard history, action shortcuts, the result, and the credit balance.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- TRUST -->
+    <section class="trust rule-b" aria-label="Who makes PinchBar">
+      <div class="wrap trust__in">
+        <p><span class="trust__k">Made by</span><span class="trust__v">MacPaw</span></p>
+        <p><span class="trust__k">Available on</span><span class="trust__v">Setapp</span></p>
+        <p><span class="trust__k">Runs on-device with</span><span class="trust__v">Apple Intelligence</span></p>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="section rule-b" aria-labelledby="why-title">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="kicker mono">Why PinchBar</p>
+          <h2 id="why-title" class="h2">Your clipboard, <span class="dim">with a few new tricks.</span></h2>
+        </header>
+        <div class="cards3">
+          <article class="card reveal">
+            <svg class="card__ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2"/><path d="M9 4.5V3h6v1.5M9 10h6M9 14h4"/></svg>
+            <h3>Built on Copy and Paste</h3>
+            <p>You copy the way you always have. PinchBar keeps a searchable history and puts AI actions right next to it.</p>
+            <p class="card__foot mono">Last 200 copies kept by default</p>
+          </article>
+          <article class="card reveal">
+            <svg class="card__ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M6 18l2-2M16 8l2-2"/><circle cx="12" cy="12" r="3"/></svg>
+            <h3>No keys, no setup</h3>
+            <p>AI comes with Setapp, so there is no API key to paste and no account to manage. Pick an action and go.</p>
+            <p class="card__foot mono">2,500 bonus AI credits for new users</p>
+          </article>
+          <article class="card reveal">
+            <svg class="card__ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            <h3>Private where it counts</h3>
+            <p>History stays on your Mac. Text goes to AI only when you run an action — and with Apple Intelligence, it never leaves the Mac.</p>
+            <p class="card__foot mono">Keys and tokens saved as locked cards</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE STORY -->
+    <section class="section story rule-b" id="features" aria-labelledby="features-title">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="kicker mono">Features</p>
+          <h2 id="features-title" class="h2">Four ways to work <span class="dim">faster with text.</span></h2>
+        </header>
+        <div class="story__grid">
+          <nav class="story__index" aria-label="Feature chapters">
+            <ol>
+              <li><a href="#ch1" class="is-active"><span class="mono">01</span>The panel</a></li>
+              <li><a href="#ch2"><span class="mono">02</span>Selected Text Actions</a></li>
+              <li><a href="#ch3"><span class="mono">03</span>Your actions</a></li>
+              <li><a href="#ch4"><span class="mono">04</span>History &amp; privacy</a></li>
+            </ol>
+          </nav>
+
+          <div class="story__chapters">
+            <article class="chapter" id="ch1" aria-labelledby="ch1-title">
+              <div class="chapter__text reveal">
+                <p class="kicker mono"><span>01</span> The panel</p>
+                <h3 id="ch1-title" class="h3">Copy as usual. <span class="dim">Then press Control+C.</span></h3>
+                <p>The PinchBar panel drops down from the menu bar with your recent copies on top and a row of actions below. Pick a card, pick an action, and the result appears underneath.</p>
+                <ul class="ticks">
+                  <li>Recent and Pinned tabs, plus search across your history</li>
+                  <li>Ten actions in one row, each with its own shortcut</li>
+                  <li>Copy the result when it looks right — nothing is pasted for you</li>
+                </ul>
+                <p class="detail"><kbd>⌃</kbd><kbd>C</kbd> opens the panel. Change it any time in Settings → Shortcut.</p>
+              </div>
+              <figure class="blush chapter__shot reveal">
+                <img class="shot shot--tall" src="assets/shots/panel-summarize-460.webp" srcset="assets/shots/panel-summarize-460.webp 460w, assets/shots/panel-summarize-920.webp 920w" sizes="(min-width: 1024px) 300px, 60vw" width="460" height="900" loading="lazy" decoding="async" alt="The PinchBar panel with a research paragraph selected and its one-sentence Summarize result.">
+              </figure>
+            </article>
+
+            <article class="chapter" id="ch2" aria-labelledby="ch2-title">
+              <div class="chapter__text reveal">
+                <p class="kicker mono"><span>02</span> Selected Text Actions</p>
+                <h3 id="ch2-title" class="h3">Fix text <span class="dim">right where you wrote it.</span></h3>
+                <p>Select text in another app and a small PinchBar button appears next to it. Choose an action, check the result, and paste it straight back over your selection.</p>
+                <ul class="ticks">
+                  <li>Click the floating button, or press an action shortcut</li>
+                  <li>Read and edit the result before it goes anywhere</li>
+                  <li>Paste Text replaces your selection; Copy keeps it on the clipboard</li>
+                </ul>
+                <p class="detail">Select text, press <kbd>⌃</kbd><kbd>8</kbd> to Shorten it. Needs Accessibility access.</p>
+              </div>
+              <figure class="blush chapter__shot chapter__shot--pair reveal">
+                <img class="shot pair__a" src="assets/shots/action-picker-252.webp" srcset="assets/shots/action-picker-252.webp 252w, assets/shots/action-picker-504.webp 504w" sizes="(min-width: 1024px) 170px, 34vw" width="252" height="412" loading="lazy" decoding="async" alt="The action picker that opens from the floating button: Fix &amp; Native, Clarify, Fact Check, Summarize, Translate, Structure, Action Items, Shorten, Expand and Draft Reply, with Control+1 to Control+0.">
+                <img class="shot pair__b" src="assets/shots/selection-result-430.webp" srcset="assets/shots/selection-result-430.webp 430w, assets/shots/selection-result-860.webp 860w" sizes="(min-width: 1024px) 290px, 56vw" width="430" height="489" loading="lazy" decoding="async" alt="The AI Result window for Shorten, with the shortened text and Copy and Paste Text buttons.">
+                <img class="pair__btn" src="assets/shots/float-button-128.webp" width="64" height="64" loading="lazy" decoding="async" alt="The PinchBar floating button that appears beside selected text.">
+              </figure>
+            </article>
+
+            <article class="chapter" id="ch3" aria-labelledby="ch3-title">
+              <div class="chapter__text reveal">
+                <p class="kicker mono"><span>03</span> Your actions</p>
+                <h3 id="ch3-title" class="h3">Ten actions. <span class="dim">All yours to edit.</span></h3>
+                <p>Every action is a short set of instructions you can read and rewrite. Tune the built-in ones to your voice, or add actions for the jobs you repeat every week.</p>
+                <ul class="chips" aria-label="Built-in actions">
+                  <li>Fix &amp; Native</li><li>Clarify</li><li>Fact Check</li><li>Summarize</li><li>Translate</li>
+                  <li>Structure</li><li>Action Items</li><li>Shorten</li><li>Expand</li><li>Draft Reply</li>
+                </ul>
+                <ul class="ticks">
+                  <li>Rename an action, change its icon, or rewrite its instructions</li>
+                  <li>Add your own actions; reset a built-in one in a click</li>
+                  <li>Import and export actions as Markdown to share with your team</li>
+                </ul>
+                <p class="detail">The first ten actions get <kbd>⌃</kbd><kbd>1</kbd> to <kbd>⌃</kbd><kbd>0</kbd>.</p>
+              </div>
+              <figure class="blush chapter__shot chapter__shot--wide reveal">
+                <img class="shot" src="assets/shots/settings-actions-620.webp" srcset="assets/shots/settings-actions-620.webp 620w, assets/shots/settings-actions-1240.webp 1240w" sizes="(min-width: 1024px) 520px, 88vw" width="620" height="552" loading="lazy" decoding="async" alt="PinchBar Settings, Actions tab: the list of ten actions and the editable instructions for Fix &amp; Native.">
+              </figure>
+            </article>
+
+            <article class="chapter" id="ch4" aria-labelledby="ch4-title">
+              <div class="chapter__text reveal">
+                <p class="kicker mono"><span>04</span> History &amp; privacy</p>
+                <h3 id="ch4-title" class="h3">Your history stays <span class="dim">on your Mac.</span></h3>
+                <p>PinchBar remembers what you copied so you can find it again. It also knows what not to keep in plain sight.</p>
+                <ul class="ticks">
+                  <li>API keys, tokens and passwords are saved as locked cards — unlock them with your Mac's authentication</li>
+                  <li>One-time codes are skipped, and copies from password managers are ignored</li>
+                  <li>Add any app to the ignore list, or turn off saving AI results</li>
+                </ul>
+                <p class="detail">Keeps your last <span class="mono">200</span> copies by default — choose from 10 to unlimited.</p>
+              </div>
+              <figure class="blush chapter__shot chapter__shot--wide reveal">
+                <img class="shot" src="assets/shots/panel-locked-460.webp" srcset="assets/shots/panel-locked-460.webp 460w, assets/shots/panel-locked-920.webp 920w" sizes="(min-width: 1024px) 460px, 88vw" width="460" height="280" loading="lazy" decoding="async" alt="Clipboard history with a meeting-notes card and a locked card that says Click to unlock.">
+              </figure>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEMO (dark band) -->
+    <section class="band" id="demo" aria-labelledby="demo-title">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="kicker mono">Try an action</p>
+          <h2 id="demo-title" class="h2">Pick some text. <span class="dim">Pick an action.</span></h2>
+          <p class="sec-sub">These are pre-written examples of what PinchBar returns. Real results vary with your text.</p>
+        </header>
+
+        <div class="demo reveal">
+          <div class="demo__col">
+            <p class="demo__label mono" id="demo-in-label">1 · Your text</p>
+            <div class="seg" role="tablist" aria-label="Sample text">
+              <button type="button" role="tab" id="s-email" aria-selected="true" aria-controls="demo-input">Team email</button>
+              <button type="button" role="tab" id="s-notes" aria-selected="false" aria-controls="demo-input" tabindex="-1">Meeting notes</button>
+              <button type="button" role="tab" id="s-msg" aria-selected="false" aria-controls="demo-input" tabindex="-1">Customer message</button>
+            </div>
+            <div class="demo__card demo__input" id="demo-input" role="tabpanel" aria-labelledby="s-email">
+              <p id="demo-input-text"></p>
+            </div>
+          </div>
+
+          <div class="demo__col">
+            <p class="demo__label mono">2 · Action</p>
+            <div class="actions" role="group" aria-label="Actions">
+              <button type="button" data-action="fix" aria-pressed="true">Fix &amp; Native <kbd>⌃1</kbd></button>
+              <button type="button" data-action="summarize" aria-pressed="false">Summarize <kbd>⌃4</kbd></button>
+              <button type="button" data-action="items" aria-pressed="false">Action Items <kbd>⌃7</kbd></button>
+              <button type="button" data-action="reply" aria-pressed="false">Draft Reply <kbd>⌃0</kbd></button>
+            </div>
+            <div class="demo__card demo__output" aria-live="polite">
+              <p class="demo__tag mono"><span>Example output</span><span id="demo-out-action">Fix &amp; Native</span></p>
+              <div id="demo-output"></div>
+            </div>
+          </div>
+        </div>
+        <div class="band__cta reveal">
+          <a class="btn btn--light" href="https://account.setapp.com/get-free/apps/pinchbar">Try it on your own text <span class="btn__chip" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"/></svg></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW -->
+    <section class="section rule-b" id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="kicker mono">How it works</p>
+          <h2 id="how-title" class="h2">Three steps. <span class="dim">About a minute.</span></h2>
+        </header>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__n mono">01</span>
+            <h3>Get PinchBar on Setapp</h3>
+            <p>Install it for free. New users start with 2,500 bonus AI credits.</p>
+            <p class="step__tag mono">Free · Setapp</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__n mono">02</span>
+            <h3>Copy or select text</h3>
+            <p>In Mail, Slack, Notes, your browser — anywhere you write.</p>
+            <p class="step__tag mono"><kbd>⌘</kbd><kbd>C</kbd> as usual</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__n mono">03</span>
+            <h3>Pick an action, paste</h3>
+            <p>Open the panel, choose an action, then Copy — or Paste Text over your selection.</p>
+            <p class="step__tag mono"><kbd>⌃</kbd><kbd>C</kbd> opens PinchBar</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- COMPARISON -->
+    <section class="section rule-b" aria-labelledby="compare-title">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="kicker mono">Compare</p>
+          <h2 id="compare-title" class="h2">Fewer tabs. <span class="dim">Fewer steps.</span></h2>
+        </header>
+        <dl class="stats reveal">
+          <div><dt>Built-in actions</dt><dd>10</dd></div>
+          <div><dt>Action shortcuts</dt><dd><span class="mono">⌃1–⌃0</span></dd></div>
+          <div><dt>Copies kept by default</dt><dd>200</dd></div>
+          <div><dt>Bonus AI credits</dt><dd>2,500</dd></div>
+        </dl>
+        <div class="table-wrap reveal">
+          <table class="compare">
+            <caption class="sr">The usual way compared with PinchBar</caption>
+            <thead><tr><th scope="col">The usual way</th><th scope="col">With PinchBar</th></tr></thead>
+            <tbody>
+              <tr><td>Copy, open a chatbot tab, paste, type a prompt</td><td>Press <kbd>⌃</kbd><kbd>C</kbd> and pick an action</td></tr>
+              <tr><td>Rewrite the same prompt every time</td><td>Ten saved actions, each on a shortcut</td></tr>
+              <tr><td>Copy the answer, switch back, paste it in</td><td>Paste Text replaces your selection</td></tr>
+              <tr><td>The thing you copied ten minutes ago is gone</td><td>Your last 200 copies, searchable</td></tr>
+              <tr><td>Keys and tokens sit in plain clipboard history</td><td>Secrets are saved as locked cards</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- GET -->
+    <section class="section rule-b" id="get" aria-labelledby="get-title">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="kicker mono">Get PinchBar</p>
+          <h2 id="get-title" class="h2">Free to install. <span class="dim">Credits included.</span></h2>
+        </header>
+        <div class="get">
+          <article class="price reveal">
+            <p class="price__k mono">On Setapp</p>
+            <p class="price__v">Free</p>
+            <p class="price__sub">plus <strong>2,500 bonus AI credits</strong> for new users</p>
+            <ul class="ticks">
+              <li>All ten actions and custom actions</li>
+              <li>Clipboard history with locked secrets</li>
+              <li>Selected Text Actions in other apps</li>
+              <li>Setapp AI, or Apple Intelligence on-device</li>
+            </ul>
+            <a class="btn" href="https://account.setapp.com/get-free/apps/pinchbar">Try PinchBar free <span class="btn__chip" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"/></svg></span></a>
+            <p class="req">macOS 15.6 or later · English interface · 19.8 MB · <a href="https://setapp.com/apps/pinchbar">See PinchBar on Setapp</a></p>
+          </article>
+          <article class="credits reveal" aria-labelledby="credits-title">
+            <h3 id="credits-title">How AI credits work</h3>
+            <ol class="credits__list">
+              <li><span class="mono">01</span><p><strong>Setapp AI is the default.</strong> Each action you run with it uses AI credits from your Setapp account.</p></li>
+              <li><span class="mono">02</span><p><strong>Your balance is always visible</strong> at the bottom of the panel. Click Get more to add credits through Setapp.</p></li>
+              <li><span class="mono">03</span><p><strong>Apple Intelligence uses no credits.</strong> On Macs that support it, switch to it in Settings → AI and everything runs on-device.</p></li>
+            </ol>
+            <figure class="blush credits__shot">
+              <img class="shot" src="assets/shots/settings-provider-620.webp" srcset="assets/shots/settings-provider-620.webp 620w, assets/shots/settings-provider-1240.webp 1240w" sizes="(min-width: 1024px) 480px, 84vw" width="620" height="157" loading="lazy" decoding="async" alt="Settings, AI Provider: Apple Intelligence (on-device, private, free) and Setapp AI+ (included in Setapp), with an option to use Apple Intelligence if Setapp AI is unavailable.">
+            </figure>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SETAPP STEPS -->
+    <section class="section rule-b" aria-labelledby="trial-title">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="kicker mono">Free trial</p>
+          <h2 id="trial-title" class="h2">Your free start <span class="dim">goes through Setapp.</span></h2>
+          <p class="sec-sub">Setapp is MacPaw's app platform. It installs and updates PinchBar for you.</p>
+        </header>
+        <ol class="trial">
+          <li class="trial__card reveal">
+            <figure class="trial__shot"><img src="assets/shots/setapp-signin-640.webp" srcset="assets/shots/setapp-signin-640.webp 640w, assets/shots/setapp-signin-1200.webp 1200w" sizes="(min-width: 1024px) 380px, 90vw" width="640" height="350" loading="lazy" decoding="async" alt="The Setapp sign-in page with PinchBar shown as the app you are getting."></figure>
+            <p class="mono trial__n">Step 1</p>
+            <h3>Sign in or create an account</h3>
+            <p>Use Google, Apple or your email. New accounts are created on the spot.</p>
+          </li>
+          <li class="trial__card reveal">
+            <figure class="trial__shot"><img src="assets/shots/setapp-store-640.webp" srcset="assets/shots/setapp-store-640.webp 640w, assets/shots/setapp-store-1200.webp 1200w" sizes="(min-width: 1024px) 380px, 90vw" width="640" height="265" loading="lazy" decoding="async" alt="PinchBar's page on Setapp with the Get for free button."></figure>
+            <p class="mono trial__n">Step 2</p>
+            <h3>Install Setapp and PinchBar</h3>
+            <p>Setapp downloads to your Mac and installs PinchBar for you.</p>
+          </li>
+          <li class="trial__card reveal">
+            <figure class="trial__shot trial__shot--dark"><img src="assets/shots/panel-top-460.webp" srcset="assets/shots/panel-top-460.webp 460w, assets/shots/panel-top-920.webp 920w" sizes="(min-width: 1024px) 300px, 70vw" width="460" height="280" loading="lazy" decoding="async" alt="The top of the PinchBar panel with recent clipboard history."></figure>
+            <p class="mono trial__n">Step 3</p>
+            <h3>Open PinchBar from the menu bar</h3>
+            <p>Copy something, press <kbd>⌃</kbd><kbd>C</kbd> and run your first action.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section rule-b" id="faq" aria-labelledby="faq-title">
+      <div class="wrap faq">
+        <header class="faq__head reveal">
+          <p class="kicker mono">FAQ</p>
+          <h2 id="faq-title" class="h2">Questions, <span class="dim">answered.</span></h2>
+          <p class="sec-sub">Still stuck? <a href="https://setapp.com/apps/pinchbar">Visit PinchBar on Setapp</a>.</p>
+        </header>
+        <div class="faq__list">
+          <details name="faq" open>
+            <summary>How much does PinchBar cost?</summary>
+            <p>PinchBar is free to install on Setapp, and new users get 2,500 bonus AI credits. Actions you run with Setapp AI use credits; you can add more through Setapp. Actions you run with Apple Intelligence use none.</p>
+          </details>
+          <details name="faq">
+            <summary>What exactly is PinchBar?</summary>
+            <p>A menu bar app that keeps your clipboard history and runs AI actions on text: fix, clarify, fact check, summarize, translate, structure, pull out action items, shorten, expand or draft a reply. It is not a chat app — you give it text, it gives you back a better version.</p>
+          </details>
+          <details name="faq">
+            <summary>Do I need an API key or an AI account?</summary>
+            <p>No. AI access comes with Setapp, so there is nothing to sign up for besides your Setapp account.</p>
+          </details>
+          <details name="faq">
+            <summary>Can PinchBar work on-device with Apple Intelligence?</summary>
+            <p>Yes, on Macs that support Apple Intelligence. Switch to it in Settings → AI. Your text stays on your Mac and no credits are used. If you choose Apple Intelligence, PinchBar never sends your text to the cloud instead.</p>
+          </details>
+          <details name="faq">
+            <summary>Where is my clipboard history stored?</summary>
+            <p>Locally, on your Mac. PinchBar keeps your last 200 copies by default; you can choose anywhere from 10 to unlimited. Text is sent to an AI provider only when you run an action.</p>
+          </details>
+          <details name="faq">
+            <summary>What happens when I copy a password or an API key?</summary>
+            <p>Text that looks like a secret — API keys, tokens, JWTs, private keys, passwords in connection strings — is saved as a locked card you unlock with your Mac's authentication. One-time codes are skipped, and copies from apps like 1Password, Bitwarden and Keychain Access are ignored. You can ignore any other app too.</p>
+          </details>
+          <details name="faq">
+            <summary>Which apps do Selected Text Actions work in?</summary>
+            <p>Most Mac apps where you can select text, including browsers and chat apps. PinchBar needs Accessibility access to read your selection and paste the result back; macOS asks once.</p>
+          </details>
+          <details name="faq">
+            <summary>What do I need to run it?</summary>
+            <p>macOS 15.6 or later and a Setapp account. PinchBar's interface is in English. Apple Intelligence on-device needs a Mac that supports it.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final" aria-labelledby="final-title">
+      <div class="wrap final__grid">
+        <div class="final__copy reveal">
+          <h2 id="final-title" class="display display--sm">Ready to pinch <em>some text?</em></h2>
+          <p class="lead">Copy, press <kbd>⌃</kbd><kbd>C</kbd>, pick an action. That's the whole trick.</p>
+          <div class="ctas">
+            <a class="btn" href="https://account.setapp.com/get-free/apps/pinchbar">Try PinchBar free <span class="btn__chip" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"/></svg></span></a>
+            <a class="btn btn--ghost" href="https://setapp.com/apps/pinchbar">View on Setapp</a>
+          </div>
+          <ul class="chips chips--quiet" aria-label="Highlights">
+            <li>Clipboard history</li><li>10 AI actions</li><li>Selected Text Actions</li><li>Locked secrets</li><li>Apple Intelligence</li>
+          </ul>
+        </div>
+        <figure class="blush final__shot reveal">
+          <img class="shot shot--tall" src="assets/shots/panel-reply-460.webp" srcset="assets/shots/panel-reply-460.webp 460w, assets/shots/panel-reply-920.webp 920w" sizes="(min-width: 1024px) 300px, 60vw" width="460" height="900" loading="lazy" decoding="async" alt="The PinchBar panel with a Draft Reply result for a customer message.">
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div class="footer__brand">
+        <a class="brand brand--light" href="#top"><img src="assets/img/app-icon-64.webp" width="28" height="28" alt=""><span>PinchBar</span></a>
+        <p>Transform text in a pinch. A Mac menu bar app by MacPaw.</p>
+      </div>
+      <nav aria-label="Product">
+        <h2>Product</h2>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#demo">Try an action</a></li>
+          <li><a href="#get">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="https://setapp.com/apps/pinchbar">PinchBar on Setapp</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company">
+        <h2>Company</h2>
+        <ul>
+          <li><a href="https://macpaw.com">MacPaw</a></li>
+          <li><a href="https://setapp.com">Setapp</a></li>
+          <li><a href="#">Support</a><!-- TODO(copy): support link or email --></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="wrap footer__base">
+      <p>© <span id="year">2026</span> MacPaw Way Ltd. All rights reserved.<!-- TODO(copy): confirm legal entity --></p>
+      <p><a href="#">Privacy</a><!-- TODO(copy): privacy URL --> · <a href="#">Terms</a><!-- TODO(copy): terms URL --></p>
+    </div>
+  </footer>
+
+  <script src="assets/main.js?v=202610051500" defer></script>
+</body>
+</html>
