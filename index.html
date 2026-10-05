@@ -29,7 +29,7 @@
   <link rel="manifest" href="site.webmanifest">
 
   <link rel="preload" href="assets/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/styles.css?v=202610052130">
+  <link rel="stylesheet" href="assets/styles.css?v=202610052300">
   <script>document.documentElement.classList.add('js');</script>
 
   <script type="application/ld+json">
@@ -296,7 +296,7 @@
             </div>
           </div>
 
-          <div class="demo__col">
+          <div class="demo__col demo__col--act">
             <p class="demo__label mono">2 · Action</p>
             <div class="actions" role="group" aria-label="Actions">
               <button type="button" data-action="fix" aria-pressed="true">Fix &amp; Native <kbd>⌃1</kbd></button>
@@ -328,7 +328,7 @@
             <span class="step__n mono">01</span>
             <h3>Get PinchBar on Setapp</h3>
             <p>Install it for free. New users start with 2,500 bonus AI credits.</p>
-            <p class="step__tag mono">Free · Setapp</p>
+            <p class="step__tag mono">Free · Setapp · <span class="nw">2,500 bonus AI credits</span></p>
           </li>
           <li class="step reveal">
             <span class="step__n mono">02</span>
@@ -359,6 +359,21 @@
           <div><dt>Copies kept by default</dt><dd>200</dd></div>
           <div><dt>Bonus AI credits</dt><dd>2,500</dd></div>
         </dl>
+        <div class="acts10 reveal">
+          <p class="acts10__h mono">The 10 built-in actions</p>
+          <ol class="acts10__list">
+            <li><kbd>⌃1</kbd><h3>Fix &amp; Native</h3><p>Fixes grammar, spelling and awkward phrasing so it sounds natural.</p></li>
+            <li><kbd>⌃2</kbd><h3>Clarify</h3><p>Makes the main point obvious and the text easier to act on.</p></li>
+            <li><kbd>⌃3</kbd><h3>Fact Check</h3><p>Gives a verdict on factual claims, with reasons. No live web search.</p></li>
+            <li><kbd>⌃4</kbd><h3>Summarize</h3><p>Key facts, decisions and next steps for a busy reader.</p></li>
+            <li><kbd>⌃5</kbd><h3>Translate</h3><p>Idiomatic translation that keeps tone, names and formatting.</p></li>
+            <li><kbd>⌃6</kbd><h3>Structure</h3><p>Turns a wall of text into headings, bullets or steps.</p></li>
+            <li><kbd>⌃7</kbd><h3>Action Items</h3><p>Pulls out a checklist of clear, verb-first tasks.</p></li>
+            <li><kbd>⌃8</kbd><h3>Shorten</h3><p>Cuts filler and repetition — often 40–60% shorter.</p></li>
+            <li><kbd>⌃9</kbd><h3>Expand</h3><p>A fuller, clearer version, without invented facts.</p></li>
+            <li><kbd>⌃0</kbd><h3>Draft Reply</h3><p>A short reply that answers what was asked.</p></li>
+          </ol>
+        </div>
         <div class="table-wrap reveal">
           <table class="compare">
             <caption class="sr">The usual way compared with PinchBar</caption>
@@ -372,6 +387,45 @@
             </tbody>
           </table>
         </div>
+      </div>
+    </section>
+
+    <!-- CUSTOM ACTIONS -->
+    <section class="section rule-b" id="custom" aria-labelledby="custom-title">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="kicker mono">Custom actions</p>
+          <h2 id="custom-title" class="h2">Your actions. <span class="dim">Your words.</span></h2>
+          <p class="sec-sub">An action is just a name and a few lines of instructions. Add as many as you need in Settings → Actions, or edit a built-in one until it fits the way you write.</p>
+        </header>
+        <div class="recipes">
+          <article class="recipe reveal">
+            <p class="recipe__tag mono">New action</p>
+            <h3>Release Notes</h3>
+            <p class="recipe__prompt">Turn the selected changelog into short release notes for users. Group them under New, Improved and Fixed. Skip internal changes. Return only the notes.</p>
+          </article>
+          <article class="recipe reveal">
+            <p class="recipe__tag mono">New action</p>
+            <h3>Bug Report</h3>
+            <p class="recipe__prompt">Turn the selected text into a bug report: a one-line title, steps to reproduce, expected result and actual result. Return only the report.</p>
+          </article>
+          <article class="recipe reveal">
+            <p class="recipe__tag mono">New action</p>
+            <h3>Friendlier Tone</h3>
+            <p class="recipe__prompt">Rewrite the selected text so it sounds warm and friendly but still professional. Keep every fact and every ask. Return only the rewritten text.</p>
+          </article>
+          <article class="recipe recipe--edit reveal">
+            <p class="recipe__tag mono">Edited built-in</p>
+            <h3>Fix &amp; Native</h3>
+            <p class="recipe__prompt">…Do not over-polish, explain, or add new information.<ins>Use British spelling and keep my short sentences.</ins>Return only the rewritten text.</p>
+          </article>
+        </div>
+        <ul class="ticks recipes__ticks reveal">
+          <li>Rename any action, change its icon, or rewrite its instructions</li>
+          <li>Turn off the actions you don't use; reset a built-in one in a click</li>
+          <li>Export actions as Markdown and import them to share with your team</li>
+        </ul>
+        <p class="detail reveal">These are examples — write whatever you repeat every week. The first ten actions get <span class="nw"><kbd>⌃</kbd><kbd>1</kbd> to <kbd>⌃</kbd><kbd>0</kbd>.</span></p>
       </div>
     </section>
 
@@ -541,6 +595,6 @@
     </div>
   </footer>
 
-  <script src="assets/main.js?v=202610052130" defer></script>
+  <script src="assets/main.js?v=202610052300" defer></script>
 </body>
 </html>

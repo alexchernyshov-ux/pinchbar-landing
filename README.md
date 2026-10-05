@@ -11,7 +11,7 @@ python3 -m http.server 4174
 Then open http://127.0.0.1:4174
 
 ## Files
-- `index.html` — the page. Sections in order: nav, hero (animated panel + 4 callouts), trust strip, why (3 cards), feature story 01–04 with a sticky index, "Try an action" demo (dark band), how it works, comparison, get PinchBar + credits card, free trial via Setapp, FAQ (8), final CTA, footer.
+- `index.html` — the page. Sections in order: nav, hero (animated panel + 4 callouts), trust strip, why (3 cards), feature story 01–04 with a sticky index, "Try an action" demo (dark band), how it works, comparison (stats + the 10 built-in actions with shortcuts), custom actions (4 example actions), get PinchBar + credits card, free trial via Setapp, FAQ (8), final CTA, footer.
 - `assets/styles.css` — design tokens on `:root` (colors, type, spacing, radius, shadow, motion), then components and sections.
 - `assets/main.js` — mobile menu (animated), staggered scroll reveal, lazy-image fade-in, sticky chapter index, animated FAQ accordion, the hero panel loop, and the demo (pre-written outputs).
 - Hero panel (`.pb` in `index.html`, styles under "hero: animated PinchBar panel") — an HTML/CSS replica of the PinchBar panel, not a video. It scales with its container (`cqi` units), loops: a new copy arrives, then Fix & Native, Translate, Shorten and Draft Reply run on it, credits tick down. Pauses when off-screen, when the tab is hidden, or with the pause button; with reduced motion it shows the static Fix & Native result. Callouts are pinned to the parts they label by JS.
@@ -34,16 +34,18 @@ Type is sans-serif only: Plus Jakarta Sans for headlines and body, JetBrains Mon
 - `v3-sans` (tag) — sans-serif only (Plus Jakarta Sans replaces Newsreader and Hanken Grotesk), new OG image, mobile menu height fix.
 - `v4-motion` (tag) — animated hero panel, green button chips, smoother motion (reveals, menu, FAQ), hero headline fit, tick alignment, pricing/FAQ copy.
 - `v5-cursor` (tag) — hero cursor no longer jumps on click (position via `translate`, press `scale: .9` around the arrow tip).
+- `v6-actions` (tag) — demo actions on one row (2×2 on phones), step 01 tag adds the bonus credits, the 10 built-in actions listed in Compare, new Custom actions section.
 
-## Verification (2026-10-05, re-run for v5-cursor)
+## Verification (2026-10-05, re-run for v6-actions)
 - Full-page screenshots at 360, 768, 1024, 1280 and 1536 in Chromium and WebKit: no horizontal scroll, no console errors, no overflow or clipping in the hero callouts.
 - Menu, demo tabs (incl. arrow keys), action buttons and FAQ clicked through in both engines.
-- Lighthouse mobile (served with gzip via `npx serve`): Performance 100, Accessibility 100, Best Practices 100, SEO 100 (v5-cursor; CLS 0, LCP 1.7 s). Reduced motion checked in both engines. With plain `python3 -m http.server` (no compression) Performance is ~89.
+- Lighthouse mobile (served with gzip via `npx serve`): Performance 100, Accessibility 100, Best Practices 100, SEO 100 (v6-actions; CLS 0, LCP 1.6 s). Reduced motion checked in both engines. With plain `python3 -m http.server` (no compression) Performance is ~89.
 
 ## Screenshots and demo content
 Captured from PinchBar 1.0.16 (Debug build) running in an isolated home folder, so real data was untouched. The UI is dark (the app doesn't follow light mode).
 - The texts in the screenshots and in the demo (team email, Priya's backpack message, Monday sync notes, the six-month study of 40 product teams, the `sk-demo` token) are invented demo content, not claims.
 - The credit balance in the panel footer (31,0xx of 41,000) is a real test balance and was left unblurred on purpose.
+- The custom-action examples (Release Notes, Bug Report, Friendlier Tone, the British-spelling edit to Fix & Native) are written for the page, not shipped with the app. The one-line action descriptions in Compare are paraphrased from the built-in prompts in `Models/PromptTemplate.swift`.
 - The demo outputs are pre-written and labelled "Example output". The Fix & Native output for the team email matches the real result in the hero screenshot; the others are written by hand.
 - Setapp step images are captures of the public pages `account.setapp.com/get-free/apps/pinchbar` and `setapp.com/apps/pinchbar`, cropped to leave out Setapp's rating badge.
 
