@@ -36,11 +36,12 @@ Type is sans-serif only: Plus Jakarta Sans for headlines and body, JetBrains Mon
 - `v5-cursor` (tag) — hero cursor no longer jumps on click (position via `translate`, press `scale: .9` around the arrow tip).
 - `v6-actions` (tag) — demo actions on one row (2×2 on phones), step 01 tag adds the bonus credits, the 10 built-in actions listed in Compare, new Custom actions section.
 - `v7-setapp-shots` (tag) — buttons green `#40E56C`; Setapp step 1 and 2 screenshots replaced with the PinchBar sign-in page and PinchBar's page in the Setapp app.
+- `v8-trial-cards` (tag) — "Your free start goes through Setapp." steps restyled as large rounded cards: blush backdrop on every shot with equal top/side padding, shots flush to the bottom and clipped, numbered circles, bold titles; step 1–2 shots re-cropped tight. Hero callout 4 gains "Top up anytime".
 
-## Verification (2026-10-05, re-run for v7-setapp-shots)
+## Verification (2026-10-05, re-run for v8-trial-cards)
 - Full-page screenshots at 360, 768, 1024, 1280 and 1536 in Chromium and WebKit: no horizontal scroll, no console errors, no overflow or clipping in the hero callouts.
 - Menu, demo tabs (incl. arrow keys), action buttons and FAQ clicked through in both engines.
-- Lighthouse mobile (served with gzip via `npx serve`): Performance 100, Accessibility 100, Best Practices 100, SEO 100 (v7-setapp-shots; CLS 0, LCP 1.6 s). Reduced motion checked in both engines. With plain `python3 -m http.server` (no compression) Performance is ~89.
+- Lighthouse mobile (served with gzip via `npx serve`): Performance 100, Accessibility 100, Best Practices 100, SEO 100 (v8-trial-cards; CLS 0, LCP 1.6 s). Reduced motion checked in both engines. With plain `python3 -m http.server` (no compression) Performance is ~89.
 
 ## Screenshots and demo content
 Captured from PinchBar 1.0.16 (Debug build) running in an isolated home folder, so real data was untouched. The UI is dark (the app doesn't follow light mode).

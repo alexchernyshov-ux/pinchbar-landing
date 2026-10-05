@@ -29,7 +29,7 @@
   <link rel="manifest" href="site.webmanifest">
 
   <link rel="preload" href="assets/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/styles.css?v=202610052330">
+  <link rel="stylesheet" href="assets/styles.css?v=202610060010">
   <script>document.documentElement.classList.add('js');</script>
 
   <script type="application/ld+json">
@@ -130,7 +130,7 @@
               <li class="co co--l" data-for=".pb__cards" style="--y: 25%"><span class="co__n mono">1</span><span class="co__t">Your copy history</span></li>
               <li class="co co--r" data-for=".pb__acts" style="--y: 47%"><span class="co__n mono">2</span><span class="co__t">10 actions on <span class="nw"><kbd>⌃1</kbd>–<kbd>⌃0</kbd></span><small>Fix, Shorten, Translate…</small></span></li>
               <li class="co co--l" data-for=".pb__out" style="--y: 68%"><span class="co__n mono">3</span><span class="co__t">Result, ready to copy</span></li>
-              <li class="co co--r" data-for=".pb__foot" style="--y: 96%"><span class="co__n mono">4</span><span class="co__t">Credits left</span></li>
+              <li class="co co--r" data-for=".pb__foot" style="--y: 96%"><span class="co__n mono">4</span><span class="co__t">Credits left<small>Top up anytime</small></span></li>
             </ol>
           </div>
           <button class="pb-play" type="button" aria-label="Pause animation" hidden><svg viewBox="0 0 16 16" aria-hidden="true"><path class="i-pause" d="M5.5 3.5v9M10.5 3.5v9"/><path class="i-play" d="M5 3.2v9.6L12.8 8z"/></svg></button>
@@ -477,22 +477,28 @@
         </header>
         <ol class="trial">
           <li class="trial__card reveal">
-            <figure class="trial__shot"><img src="assets/shots/setapp-signin-640.webp" srcset="assets/shots/setapp-signin-640.webp 640w, assets/shots/setapp-signin-1200.webp 1200w" sizes="(min-width: 1024px) 380px, 90vw" width="640" height="392" loading="lazy" decoding="async" alt="The Setapp sign-in page showing PinchBar, Transform text in a pinch."></figure>
-            <p class="mono trial__n">Step 1</p>
-            <h3>Sign in or create an account</h3>
-            <p>Use Google, Apple or your email. New accounts are created on the spot.</p>
+            <figure class="trial__shot"><img src="assets/shots/setapp-signin-640.webp" srcset="assets/shots/setapp-signin-640.webp 640w, assets/shots/setapp-signin-1200.webp 1200w" sizes="(min-width: 768px) 30vw, 90vw" width="640" height="378" loading="lazy" decoding="async" alt="The Setapp sign-in page showing PinchBar, Transform text in a pinch."></figure>
+            <div class="trial__body">
+              <p class="trial__n" aria-hidden="true">1</p>
+              <h3><span class="sr-only">Step 1: </span>Sign in or create an account</h3>
+              <p>Use Google, Apple or your email. New accounts are created on the spot.</p>
+            </div>
           </li>
           <li class="trial__card reveal">
-            <figure class="trial__shot"><img src="assets/shots/setapp-store-640.webp" srcset="assets/shots/setapp-store-640.webp 640w, assets/shots/setapp-store-1200.webp 1200w" sizes="(min-width: 1024px) 380px, 90vw" width="640" height="397" loading="lazy" decoding="async" alt="PinchBar's page in the Setapp app."></figure>
-            <p class="mono trial__n">Step 2</p>
-            <h3>Install Setapp and PinchBar</h3>
-            <p>Setapp downloads to your Mac and installs PinchBar for you.</p>
+            <figure class="trial__shot"><img src="assets/shots/setapp-store-640.webp" srcset="assets/shots/setapp-store-640.webp 640w, assets/shots/setapp-store-1200.webp 1200w" sizes="(min-width: 768px) 30vw, 90vw" width="640" height="373" loading="lazy" decoding="async" alt="PinchBar's page in the Setapp app."></figure>
+            <div class="trial__body">
+              <p class="trial__n" aria-hidden="true">2</p>
+              <h3><span class="sr-only">Step 2: </span>Install Setapp and PinchBar</h3>
+              <p>Setapp downloads to your Mac and installs PinchBar for you.</p>
+            </div>
           </li>
           <li class="trial__card reveal">
-            <figure class="trial__shot trial__shot--dark"><img src="assets/shots/panel-top-460.webp" srcset="assets/shots/panel-top-460.webp 460w, assets/shots/panel-top-920.webp 920w" sizes="(min-width: 1024px) 300px, 70vw" width="460" height="280" loading="lazy" decoding="async" alt="The top of the PinchBar panel with recent clipboard history."></figure>
-            <p class="mono trial__n">Step 3</p>
-            <h3>Open PinchBar from the menu bar</h3>
-            <p>Copy something, press <kbd>⌃</kbd><kbd>C</kbd> and run your first action.</p>
+            <figure class="trial__shot"><img src="assets/shots/panel-top-460.webp" srcset="assets/shots/panel-top-460.webp 460w, assets/shots/panel-top-920.webp 920w" sizes="(min-width: 768px) 30vw, 90vw" width="460" height="280" loading="lazy" decoding="async" alt="The top of the PinchBar panel with recent clipboard history."></figure>
+            <div class="trial__body">
+              <p class="trial__n" aria-hidden="true">3</p>
+              <h3><span class="sr-only">Step 3: </span>Open PinchBar from the menu bar</h3>
+              <p>Copy something, press <kbd>⌃</kbd><kbd>C</kbd> and run your first action.</p>
+            </div>
           </li>
         </ol>
       </div>
@@ -595,6 +601,6 @@
     </div>
   </footer>
 
-  <script src="assets/main.js?v=202610052330" defer></script>
+  <script src="assets/main.js?v=202610060010" defer></script>
 </body>
 </html>
