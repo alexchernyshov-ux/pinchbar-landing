@@ -33,11 +33,12 @@ Type is sans-serif only: Plus Jakarta Sans for headlines and body, JetBrains Mon
 - `v2-verified` (tag) — after the Step 5 checks (fonts trimmed, tap targets, OG image).
 - `v3-sans` (tag) — sans-serif only (Plus Jakarta Sans replaces Newsreader and Hanken Grotesk), new OG image, mobile menu height fix.
 - `v4-motion` (tag) — animated hero panel, green button chips, smoother motion (reveals, menu, FAQ), hero headline fit, tick alignment, pricing/FAQ copy.
+- `v5-cursor` (tag) — hero cursor no longer jumps on click (position via `translate`, press `scale: .9` around the arrow tip).
 
-## Verification (2026-10-05, re-run for v4-motion)
+## Verification (2026-10-05, re-run for v5-cursor)
 - Full-page screenshots at 360, 768, 1024, 1280 and 1536 in Chromium and WebKit: no horizontal scroll, no console errors, no overflow or clipping in the hero callouts.
 - Menu, demo tabs (incl. arrow keys), action buttons and FAQ clicked through in both engines.
-- Lighthouse mobile (served with gzip via `npx serve`): Performance 100, Accessibility 100, Best Practices 100, SEO 100 (v4-motion; CLS 0, LCP 1.6 s). Reduced motion checked in both engines. With plain `python3 -m http.server` (no compression) Performance is ~89.
+- Lighthouse mobile (served with gzip via `npx serve`): Performance 100, Accessibility 100, Best Practices 100, SEO 100 (v5-cursor; CLS 0, LCP 1.7 s). Reduced motion checked in both engines. With plain `python3 -m http.server` (no compression) Performance is ~89.
 
 ## Screenshots and demo content
 Captured from PinchBar 1.0.16 (Debug build) running in an isolated home folder, so real data was untouched. The UI is dark (the app doesn't follow light mode).

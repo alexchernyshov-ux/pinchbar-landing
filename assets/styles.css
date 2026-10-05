@@ -293,9 +293,9 @@ body.menu-open .nav { backdrop-filter: none; -webkit-backdrop-filter: none; back
 .pb__toast { position: absolute; z-index: 3; left: 50%; top: 6.9em; display: inline-flex; align-items: center; gap: .55em; padding: .5em .9em .5em .5em; border-radius: 999px; white-space: nowrap; font-weight: 600; background: rgba(24, 21, 24, .94); border: 1px solid rgba(255, 255, 255, .14); box-shadow: 0 1em 2em -1em rgba(0, 0, 0, .7); opacity: 0; transform: translate(-50%, -.8em) scale(.94); transition: opacity .4s var(--ease-out), transform .6s var(--ease-out); }
 .pb__toast kbd { background: var(--pb-pink); color: #2B1626; font-weight: 700; }
 .pb__toast.is-in { opacity: 1; transform: translate(-50%, 0); }
-.pb__cursor { position: absolute; z-index: 4; left: 0; top: 0; width: 1.9em; height: 1.9em; pointer-events: none; opacity: 0; transform: translate(var(--cx, 60%), var(--cy, 120%)); transition: transform .85s var(--ease-io), opacity .35s, scale .18s var(--ease-out); filter: drop-shadow(0 .2em .35em rgba(0, 0, 0, .45)); background: no-repeat center / contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M3 2l13 7.5-5.6 1.3L8 16.5z' fill='%23fff' stroke='%230D0D0D' stroke-width='1.2' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+.pb__cursor { position: absolute; z-index: 4; left: 0; top: 0; width: 1.9em; height: 1.9em; pointer-events: none; opacity: 0; transform-origin: 15% 10%; translate: var(--cx, 60%) var(--cy, 120%); transition: translate .85s var(--ease-io), opacity .35s, scale .18s var(--ease-out); filter: drop-shadow(0 .2em .35em rgba(0, 0, 0, .45)); background: no-repeat center / contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M3 2l13 7.5-5.6 1.3L8 16.5z' fill='%23fff' stroke='%230D0D0D' stroke-width='1.2' stroke-linejoin='round'/%3E%3C/svg%3E"); }
 .pb__cursor.is-on { opacity: 1; }
-.pb__cursor.is-down { scale: .82; }
+.pb__cursor.is-down { scale: .9; }
 .pb__cursor::after { content: ""; position: absolute; left: -.6em; top: -.6em; width: 1.6em; height: 1.6em; border-radius: 50%; background: rgba(240, 168, 211, .55); opacity: 0; transform: scale(.3); }
 .pb__cursor.is-down::after { animation: pb-ripple .6s var(--ease-out); }
 @keyframes pb-ripple { 0% { opacity: .9; transform: scale(.3); } 100% { opacity: 0; transform: scale(2); } }
