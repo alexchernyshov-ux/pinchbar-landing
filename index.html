@@ -29,7 +29,7 @@
   <link rel="manifest" href="site.webmanifest">
 
   <link rel="preload" href="assets/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/styles.css?v=202610060030">
+  <link rel="stylesheet" href="assets/styles.css?v=202610060100">
   <script>document.documentElement.classList.add('js');</script>
 
   <script type="application/ld+json">
@@ -128,7 +128,7 @@
             </div>
             <ol class="callouts">
               <li class="co co--l" data-for=".pb__cards" style="--y: 25%"><span class="co__n mono">1</span><span class="co__t">Your copy history</span></li>
-              <li class="co co--r" data-for=".pb__acts" style="--y: 47%"><span class="co__n mono">2</span><span class="co__t">10 actions on <span class="nw"><kbd>⌃1</kbd>–<kbd>⌃0</kbd></span><small>Fix, Shorten, Translate…</small></span></li>
+              <li class="co co--r" data-for=".pb__acts" style="--y: 47%"><span class="co__n mono">2</span><span class="co__t">10 actions on<span class="co__keys"><span class="keys"><kbd>⌃</kbd><kbd>1</kbd></span>–<span class="keys"><kbd>⌃</kbd><kbd>0</kbd></span></span><small>Fix, Shorten, Translate…</small></span></li>
               <li class="co co--l" data-for=".pb__out" style="--y: 68%"><span class="co__n mono">3</span><span class="co__t">Result, ready to copy</span></li>
               <li class="co co--r" data-for=".pb__foot" style="--y: 96%"><span class="co__n mono">4</span><span class="co__t">Credits left<small>Top up anytime</small></span></li>
             </ol>
@@ -299,10 +299,10 @@
           <div class="demo__col demo__col--act">
             <p class="demo__label mono">2 · Action</p>
             <div class="actions" role="group" aria-label="Actions">
-              <button type="button" data-action="fix" aria-pressed="true">Fix &amp; Native <kbd>⌃1</kbd></button>
-              <button type="button" data-action="summarize" aria-pressed="false">Summarize <kbd>⌃4</kbd></button>
-              <button type="button" data-action="items" aria-pressed="false">Action Items <kbd>⌃7</kbd></button>
-              <button type="button" data-action="reply" aria-pressed="false">Draft Reply <kbd>⌃0</kbd></button>
+              <button type="button" data-action="fix" aria-pressed="true">Fix &amp; Native <span class="keys"><kbd>⌃</kbd><kbd>1</kbd></span></button>
+              <button type="button" data-action="summarize" aria-pressed="false">Summarize <span class="keys"><kbd>⌃</kbd><kbd>4</kbd></span></button>
+              <button type="button" data-action="items" aria-pressed="false">Action Items <span class="keys"><kbd>⌃</kbd><kbd>7</kbd></span></button>
+              <button type="button" data-action="reply" aria-pressed="false">Draft Reply <span class="keys"><kbd>⌃</kbd><kbd>0</kbd></span></button>
             </div>
             <div class="demo__card demo__output" aria-live="polite">
               <p class="demo__tag mono"><span>Example output</span><span id="demo-out-action">Fix &amp; Native</span></p>
@@ -355,23 +355,23 @@
         </header>
         <dl class="stats reveal">
           <div><dt>Built-in actions</dt><dd>10</dd></div>
-          <div><dt>Action shortcuts</dt><dd><span class="stats__keys"><kbd>⌃1</kbd><span class="stats__to" aria-label="to">–</span><kbd>⌃0</kbd></span></dd></div>
+          <div><dt>Action shortcuts</dt><dd><span class="stats__keys"><span class="keys"><kbd>⌃</kbd><kbd>1</kbd></span><span class="stats__to" aria-label="to">–</span><span class="keys"><kbd>⌃</kbd><kbd>0</kbd></span></span></dd></div>
           <div><dt>Copies kept by default</dt><dd>200</dd></div>
           <div><dt>Bonus AI credits</dt><dd>2,500</dd></div>
         </dl>
         <div class="acts10 reveal">
           <p class="acts10__h mono">The 10 built-in actions</p>
           <ol class="acts10__list">
-            <li><kbd>⌃1</kbd><h3>Fix &amp; Native</h3><p>Fixes grammar, spelling and awkward phrasing so it sounds natural.</p></li>
-            <li><kbd>⌃2</kbd><h3>Clarify</h3><p>Makes the main point obvious and the text easier to act on.</p></li>
-            <li><kbd>⌃3</kbd><h3>Fact Check</h3><p>Gives a verdict on factual claims, with reasons. No live web search.</p></li>
-            <li><kbd>⌃4</kbd><h3>Summarize</h3><p>Key facts, decisions and next steps for a busy reader.</p></li>
-            <li><kbd>⌃5</kbd><h3>Translate</h3><p>Idiomatic translation that keeps tone, names and formatting.</p></li>
-            <li><kbd>⌃6</kbd><h3>Structure</h3><p>Turns a wall of text into headings, bullets or steps.</p></li>
-            <li><kbd>⌃7</kbd><h3>Action Items</h3><p>Pulls out a checklist of clear, verb-first tasks.</p></li>
-            <li><kbd>⌃8</kbd><h3>Shorten</h3><p>Cuts filler and repetition — often 40–60% shorter.</p></li>
-            <li><kbd>⌃9</kbd><h3>Expand</h3><p>A fuller, clearer version, without invented facts.</p></li>
-            <li><kbd>⌃0</kbd><h3>Draft Reply</h3><p>A short reply that answers what was asked.</p></li>
+            <li><span class="keys"><kbd>⌃</kbd><kbd>1</kbd></span><h3>Fix &amp; Native</h3><p>Fixes grammar, spelling and awkward phrasing so it sounds natural.</p></li>
+            <li><span class="keys"><kbd>⌃</kbd><kbd>2</kbd></span><h3>Clarify</h3><p>Makes the main point obvious and the text easier to act on.</p></li>
+            <li><span class="keys"><kbd>⌃</kbd><kbd>3</kbd></span><h3>Fact Check</h3><p>Gives a verdict on factual claims, with reasons. No live web search.</p></li>
+            <li><span class="keys"><kbd>⌃</kbd><kbd>4</kbd></span><h3>Summarize</h3><p>Key facts, decisions and next steps for a busy reader.</p></li>
+            <li><span class="keys"><kbd>⌃</kbd><kbd>5</kbd></span><h3>Translate</h3><p>Idiomatic translation that keeps tone, names and formatting.</p></li>
+            <li><span class="keys"><kbd>⌃</kbd><kbd>6</kbd></span><h3>Structure</h3><p>Turns a wall of text into headings, bullets or steps.</p></li>
+            <li><span class="keys"><kbd>⌃</kbd><kbd>7</kbd></span><h3>Action Items</h3><p>Pulls out a checklist of clear, verb-first tasks.</p></li>
+            <li><span class="keys"><kbd>⌃</kbd><kbd>8</kbd></span><h3>Shorten</h3><p>Cuts filler and repetition — often 40–60% shorter.</p></li>
+            <li><span class="keys"><kbd>⌃</kbd><kbd>9</kbd></span><h3>Expand</h3><p>A fuller, clearer version, without invented facts.</p></li>
+            <li><span class="keys"><kbd>⌃</kbd><kbd>0</kbd></span><h3>Draft Reply</h3><p>A short reply that answers what was asked.</p></li>
           </ol>
         </div>
         <div class="table-wrap reveal">
@@ -601,6 +601,6 @@
     </div>
   </footer>
 
-  <script src="assets/main.js?v=202610060030" defer></script>
+  <script src="assets/main.js?v=202610060100" defer></script>
 </body>
 </html>

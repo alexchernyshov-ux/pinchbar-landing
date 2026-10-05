@@ -73,6 +73,8 @@ button { font: inherit; color: inherit; }
 .skip:focus { top: 12px; }
 .mono { font-family: var(--mono); font-feature-settings: "zero" 0; }
 
+.keys { display: inline-flex; gap: .2em; white-space: nowrap; }
+.keys kbd { margin: 0; }
 kbd {
   display: inline-block; font-family: var(--mono); font-size: .82em; line-height: 1;
   padding: .28em .45em; margin: 0 .08em; border: 1px solid var(--rule); border-bottom-width: 2px;
@@ -203,6 +205,9 @@ body.menu-open .nav { backdrop-filter: none; -webkit-backdrop-filter: none; back
   background: var(--ink); color: #fff; font-size: .75rem; font-weight: 500;
 }
 .co__t kbd { font-size: .78em; }
+.co__t .keys { gap: 2px; }
+.co__keys { display: flex; align-items: center; gap: 6px; margin: 4px 0 3px; }
+.co__t .keys kbd { padding: .28em .36em; }
 .co__t .nw { white-space: nowrap; }
 .co__t small { display: block; font-size: .92em; font-weight: 500; color: var(--muted); letter-spacing: 0; margin-top: 1px; }
 @media (min-width: 1280px) {
@@ -414,6 +419,9 @@ body.menu-open .nav { backdrop-filter: none; -webkit-backdrop-filter: none; back
 .seg button[aria-selected="true"], .actions button[aria-pressed="true"] { background: var(--accent-soft); color: var(--plum); border-color: var(--accent-soft); }
 .actions button[aria-pressed="true"] kbd { background: rgba(43, 22, 38, .1); border-color: rgba(43, 22, 38, .2); color: var(--plum); }
 .actions kbd { font-size: .6875rem; }
+.actions .keys { gap: 2px; }
+.actions .keys kbd { padding: .24em .34em; }
+.actions button { padding-inline: 14px; }
 .demo__card { border-radius: var(--r-md); padding: 22px 24px; min-height: 220px; font-size: 1.0625rem; line-height: 1.6; }
 .demo__input { background: rgba(255, 255, 255, .04); border: 1px solid var(--rule-plum); color: #e9dbe4; }
 .demo__output { background: var(--paper); color: var(--ink); }
@@ -469,8 +477,9 @@ body.menu-open .nav { backdrop-filter: none; -webkit-backdrop-filter: none; back
 .stats div:nth-child(n+3) { border-top: 1px solid var(--rule); }
 .stats dt { font-size: var(--fs-small); color: var(--muted); }
 .stats dd { font-size: clamp(1.75rem, 1.35rem + 1.7vw, 2.625rem); font-weight: 600; line-height: 1.05; letter-spacing: -.03em; }
-.stats__keys { display: inline-flex; align-items: center; gap: .3em; height: 1.05em; letter-spacing: 0; }
+.stats__keys { display: inline-flex; align-items: center; gap: .45em; height: 1.05em; letter-spacing: 0; }
 .stats__keys kbd { font-size: .5em; font-weight: 500; padding: .38em .5em; margin: 0; border-radius: 8px; vertical-align: 0; }
+.stats__keys .keys { gap: .1em; }
 .stats__to { font-size: .5em; font-weight: 400; color: var(--muted); }
 @media (min-width: 768px) {
   .stats { grid-template-columns: repeat(4, 1fr); }
@@ -482,7 +491,7 @@ body.menu-open .nav { backdrop-filter: none; -webkit-backdrop-filter: none; back
 .acts10__h { font-size: var(--fs-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
 .acts10__list { display: grid; border-top: 1px solid var(--rule); }
 .acts10__list li { display: grid; grid-template-columns: auto 1fr; column-gap: 12px; row-gap: 4px; align-items: baseline; align-content: start; padding: 16px 0; border-bottom: 1px solid var(--rule); }
-.acts10__list kbd { grid-row: span 2; align-self: start; }
+.acts10__list .keys { grid-row: span 2; align-self: start; }
 .acts10__list h3 { font-size: 1.0625rem; font-weight: 600; letter-spacing: -.015em; line-height: 1.3; }
 .acts10__list p { font-size: var(--fs-small); color: var(--muted); line-height: 1.5; }
 @media (min-width: 768px) {
@@ -491,7 +500,7 @@ body.menu-open .nav { backdrop-filter: none; -webkit-backdrop-filter: none; back
 @media (min-width: 1280px) {
   .acts10__list { grid-template-columns: repeat(5, 1fr); column-gap: 24px; }
   .acts10__list li { grid-template-columns: 1fr; padding: 20px 0 22px; }
-  .acts10__list kbd { grid-row: auto; justify-self: start; margin-bottom: 8px; }
+  .acts10__list .keys { grid-row: auto; justify-self: start; margin-bottom: 8px; }
 }
 .table-wrap { overflow-x: auto; }
 .compare { width: 100%; border-collapse: collapse; font-size: 1rem; }
