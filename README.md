@@ -11,16 +11,17 @@ python3 -m http.server 4174
 Then open http://127.0.0.1:4174
 
 ## Files
-- `index.html` — the page. Sections in order: nav, hero (4 callouts), trust strip, why (3 cards), feature story 01–04 with a sticky index, "Try an action" demo (dark band), how it works, comparison, get PinchBar + credits card, free trial via Setapp, FAQ (8), final CTA, footer.
+- `index.html` — the page. Sections in order: nav, hero (animated panel + 4 callouts), trust strip, why (3 cards), feature story 01–04 with a sticky index, "Try an action" demo (dark band), how it works, comparison, get PinchBar + credits card, free trial via Setapp, FAQ (8), final CTA, footer.
 - `assets/styles.css` — design tokens on `:root` (colors, type, spacing, radius, shadow, motion), then components and sections.
-- `assets/main.js` — mobile menu, scroll reveal, lazy-image fade-in, sticky chapter index, and the demo (pre-written outputs).
+- `assets/main.js` — mobile menu (animated), staggered scroll reveal, lazy-image fade-in, sticky chapter index, animated FAQ accordion, the hero panel loop, and the demo (pre-written outputs).
+- Hero panel (`.pb` in `index.html`, styles under "hero: animated PinchBar panel") — an HTML/CSS replica of the PinchBar panel, not a video. It scales with its container (`cqi` units), loops: a new copy arrives, then Fix & Native, Translate, Shorten and Draft Reply run on it, credits tick down. Pauses when off-screen, when the tab is hidden, or with the pause button; with reduced motion it shows the static Fix & Native result. Callouts are pinned to the parts they label by JS.
 - `assets/fonts/` — Plus Jakarta Sans (all text; variable font instanced to weights 400–700 and subset to Latin, ~19 KB, preloaded) and JetBrains Mono (shortcut keys, step numbers, kickers). Both woff2, OFL, from the google/fonts repository.
 - `assets/img/` — app icon (from the app's `AppIcon.appiconset`), favicons, `og.png` (1200×630, rendered from the page CSS in Plus Jakarta Sans).
-- `assets/shots/` — real app screenshots as WebP, 2–3 sizes each.
+- `assets/shots/` — real app screenshots as WebP, 2–3 sizes each. Not used on the page right now (kept for reuse): `panel-fix-native-*` (hero screenshot before the animated panel), `settings-history-*`, `settings-shortcut-*`.
 - `raw/` — full-size PNG originals. Gitignored, not committed.
 
 ## Style
-Layout follows marketer.com (thin vertical rules, hairline section dividers, two-tone headlines, split hero, sticky 01–04 index, one dark band, two-column FAQ, pill buttons with an arrow chip), recoloured with PinchBar pink: accent `#8F4F7D`, accent-soft `#F3BADA`, blush panels `#FBEFF5→#EFCFE0` with grain, plum `#2B1626`, paper `#FFFEFB`, ink `#0D0D0D`, muted `#737373`, rules `#EBEAE6`.
+Layout follows marketer.com (thin vertical rules, hairline section dividers, two-tone headlines, split hero, sticky 01–04 index, one dark band, two-column FAQ, pill buttons with a green arrow chip), recoloured with PinchBar pink: accent `#8F4F7D`, accent-soft `#F3BADA`, blush panels `#FBEFF5→#EFCFE0` with grain, plum `#2B1626`, paper `#FFFEFB`, ink `#0D0D0D`, muted `#737373`, rules `#EBEAE6`. Button arrow chip green `#3CCF83` (`--go`); on hover the chip grows with a green ring and the arrow slides through.
 
 Type is sans-serif only: Plus Jakarta Sans for headlines and body, JetBrains Mono only for shortcut keys, step numbers and kickers.
 - Headlines (display, h2, h3, card and step titles, trust strip values, stats, the price "Free", FAQ questions, mobile menu links) are weight 600 with negative tracking (display −0.035em, h2 −0.03em, h3 −0.025em) and tight line height (1.02–1.2).
@@ -31,11 +32,12 @@ Type is sans-serif only: Plus Jakarta Sans for headlines and body, JetBrains Mon
 - `v1-first-build` (tag) — first full build.
 - `v2-verified` (tag) — after the Step 5 checks (fonts trimmed, tap targets, OG image).
 - `v3-sans` (tag) — sans-serif only (Plus Jakarta Sans replaces Newsreader and Hanken Grotesk), new OG image, mobile menu height fix.
+- `v4-motion` (tag) — animated hero panel, green button chips, smoother motion (reveals, menu, FAQ), hero headline fit, tick alignment, pricing/FAQ copy.
 
-## Verification (2026-10-05, re-run for v3-sans)
+## Verification (2026-10-05, re-run for v4-motion)
 - Full-page screenshots at 360, 768, 1024, 1280 and 1536 in Chromium and WebKit: no horizontal scroll, no console errors, no overflow or clipping in the hero callouts.
 - Menu, demo tabs (incl. arrow keys), action buttons and FAQ clicked through in both engines.
-- Lighthouse mobile (served with gzip via `npx serve`): Performance 100, Accessibility 100, Best Practices 100, SEO 100 (v3-sans; v2 was 98). With plain `python3 -m http.server` (no compression) Performance is ~89.
+- Lighthouse mobile (served with gzip via `npx serve`): Performance 100, Accessibility 100, Best Practices 100, SEO 100 (v4-motion; CLS 0, LCP 1.6 s). Reduced motion checked in both engines. With plain `python3 -m http.server` (no compression) Performance is ~89.
 
 ## Screenshots and demo content
 Captured from PinchBar 1.0.16 (Debug build) running in an isolated home folder, so real data was untouched. The UI is dark (the app doesn't follow light mode).
@@ -54,7 +56,7 @@ Captured from PinchBar 1.0.16 (Debug build) running in an isolated home folder, 
 
 ## Before launch (TODOs)
 Search the code for `TODO` to find each spot.
-- **Domain:** set the canonical URL, `og:url`, `og:image` and JSON-LD URLs (currently `https://pinchbar.app/`).
+- **Domain:** `pinchbar.app` is confirmed; remove the `TODO(copy)` notes next to the canonical and `og:image` tags when publishing.
 - **Footer links:** Support, Privacy and Terms point to `#`. Confirm the legal entity in the copyright line ("MacPaw Way Ltd.").
 - **Logos:** MacPaw, Setapp and Apple Intelligence appear as text only. Swap in official logos once brand use is approved (no Apple logo).
 - **TODO(asset):** a screenshot of the Setapp desktop app installing PinchBar would be a better Step 2 image than the store page.

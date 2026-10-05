@@ -29,8 +29,7 @@
   <link rel="manifest" href="site.webmanifest">
 
   <link rel="preload" href="assets/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" as="image" href="assets/shots/panel-fix-native-460.webp" imagesrcset="assets/shots/panel-fix-native-460.webp 460w, assets/shots/panel-fix-native-690.webp 690w, assets/shots/panel-fix-native-920.webp 920w" imagesizes="(min-width: 1024px) 300px, 62vw" fetchpriority="high">
-  <link rel="stylesheet" href="assets/styles.css?v=202610051530">
+  <link rel="stylesheet" href="assets/styles.css?v=202610052000">
   <script>document.documentElement.classList.add('js');</script>
 
   <script type="application/ld+json">
@@ -105,15 +104,37 @@
 
         <figure class="hero__shot blush">
           <div class="shot-pin">
-            <img class="shot" src="assets/shots/panel-fix-native-460.webp" srcset="assets/shots/panel-fix-native-460.webp 460w, assets/shots/panel-fix-native-690.webp 690w, assets/shots/panel-fix-native-920.webp 920w" sizes="(min-width: 1024px) 300px, 62vw" width="460" height="900" alt="The PinchBar panel: a copied email with typos, the action row with Fix &amp; Native selected, the corrected email below it, and the AI credit balance at the bottom." fetchpriority="high">
+            <div class="pb" aria-hidden="true">
+              <div class="pb__top">
+                <div class="pb__bar"><img src="assets/img/app-icon-64.webp" width="64" height="64" alt=""><b>PinchBar</b><span class="pb__fb">Feedback</span><svg viewBox="0 0 16 16"><path d="M2.5 6v4h2.5L8.5 13V3L5 6z"/><path d="M11 5.5a3.5 3.5 0 0 1 0 5M12.8 3.8a6 6 0 0 1 0 8.4"/></svg><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="2.2"/><path d="M8 1.5v2M8 12.5v2M1.5 8h2M12.5 8h2M3.4 3.4l1.4 1.4M11.2 11.2l1.4 1.4M3.4 12.6l1.4-1.4M11.2 4.8l1.4-1.4"/></svg></div>
+                <div class="pb__search"><svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 3 3"/></svg>Search in clipboard</div>
+                <div class="pb__tabs"><span class="pb__seg"><i class="on">Recent</i><i>Pinned</i></span><span class="pb__clear">Clear All</span></div>
+                <div class="pb__cards">
+                  <div class="pb__track">
+                    <div class="pb__card pb__card--new is-sel"><p>hey team, quick update — the launch moved to thursday becuase legal still need to review the pricing page. can everyone make sure there assets are final by wed EOD? thx</p><footer><span class="pb__app" style="--c:#3b8cf6"></span>Mail<span>Just now</span></footer></div>
+                    <div class="pb__card"><p>Teams that write shorter messages spend less time in meetings. In a six-month study of 40 product teams, groups that kept updates under 150 words…</p><footer><span class="pb__app" style="--c:#f5c443"></span>Notes<span>2 min</span></footer></div>
+                    <div class="pb__card"><p>Hi! I ordered the large travel backpack last week but received the medium one. Can I swap it?</p><footer><span class="pb__app" style="--c:#34c759"></span>Messages<span>5 min</span></footer></div>
+                  </div>
+                </div>
+              </div>
+              <div class="pb__body">
+                <div class="pb__acts"><div class="pb__row"><span class="pb__chip is-on" data-act="fix"><svg viewBox="0 0 16 16"><path d="M3 13 10 6M9 3v2M12 6h2M12.5 3.5 11 5M5 3l.5 1.2L6.7 4.7 5.5 5.2 5 6.4 4.5 5.2 3.3 4.7 4.5 4.2z"/></svg>Fix &amp; Native<kbd>⌃1</kbd></span><span class="pb__chip" data-act="reply"><svg viewBox="0 0 16 16"><path d="M13 9v3.5a1 1 0 0 1-1 1H3.5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1H7"/><path d="m11 2.5 2.5 2.5L8 10.5H5.5V8z"/></svg>Draft Reply<kbd>⌃0</kbd></span><span class="pb__chip" data-act="clarify"><svg viewBox="0 0 16 16"><path d="M6 12.5h4M6.5 14.5h3M8 1.8a4.2 4.2 0 0 0-2.4 7.6c.4.3.6.8.6 1.3v.3h3.6v-.3c0-.5.2-1 .6-1.3A4.2 4.2 0 0 0 8 1.8z"/></svg>Clarify<kbd>⌃2</kbd></span><span class="pb__chip" data-act="fact"><svg viewBox="0 0 16 16"><path d="m8 1.5 1.6 1.2 2-.1.6 1.9 1.6 1.2-.7 1.9.7 1.9-1.6 1.2-.6 1.9-2-.1L8 14.5l-1.6-1.2-2 .1-.6-1.9-1.6-1.2.7-1.9-.7-1.9 1.6-1.2.6-1.9 2 .1z"/><path d="m5.8 8 1.5 1.5 3-3"/></svg>Fact Check<kbd>⌃3</kbd></span><span class="pb__chip" data-act="sum"><svg viewBox="0 0 16 16"><path d="M4 1.5h5.5L12.5 4.5v10h-8.5zM9.5 1.5v3h3M6 8h4.5M6 10.5h4.5"/></svg>Summarize<kbd>⌃4</kbd></span><span class="pb__chip" data-act="trans"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.2"/><path d="M1.8 8h12.4M8 1.8c1.8 1.8 2.6 3.9 2.6 6.2S9.8 12.4 8 14.2C6.2 12.4 5.4 10.3 5.4 8S6.2 3.6 8 1.8z"/></svg>Translate<kbd>⌃5</kbd></span><span class="pb__chip" data-act="struct"><svg viewBox="0 0 16 16"><path d="M6 4h7.5M6 8h7.5M6 12h7.5M2.5 4h.5M2.5 8h.5M2.5 12h.5"/></svg>Structure<kbd>⌃6</kbd></span><span class="pb__chip" data-act="items"><svg viewBox="0 0 16 16"><path d="M7.5 4.5h6M7.5 11h6M2.5 4l1.2 1.2L6 3M2.5 10.5l1.2 1.2L6 9.5"/></svg>Action Items<kbd>⌃7</kbd></span><span class="pb__chip" data-act="short"><svg viewBox="0 0 16 16"><circle cx="4" cy="4.5" r="2"/><circle cx="4" cy="11.5" r="2"/><path d="M5.6 5.6 13.5 12M5.6 10.4 13.5 4"/></svg>Shorten<kbd>⌃8</kbd></span><span class="pb__chip" data-act="expand"><svg viewBox="0 0 16 16"><path d="M9.5 2.5h4v4M6.5 13.5h-4v-4M13.5 2.5 9 7M2.5 13.5 7 9"/></svg>Expand<kbd>⌃9</kbd></span></div></div>
+                <div class="pb__meta"><span class="pb__label">Clawibrated to <b>Fix &amp; Native</b></span><span class="pb__tools"><span>Copy</span><span>Reset</span></span></div>
+                <div class="pb__out"><p class="pb__text">Hey team, quick update — the launch has moved to Thursday because Legal still needs to review the pricing page. Can everyone make sure their assets are final by Wed EOD? Thanks.</p><span class="pb__think"><i></i><i></i><i></i></span></div>
+              </div>
+              <div class="pb__foot"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="5.5"/><circle cx="8" cy="8" r="1.6" fill="currentColor"/></svg><b class="pb__bal">31 029</b><span>of 41 000</span><span class="pb__mut">credits</span><i class="pb__meter"><i></i></i><span class="pb__more">Get more</span></div>
+              <span class="pb__toast"><kbd>⌘C</kbd>Copied from Mail</span>
+              <span class="pb__cursor"></span>
+            </div>
             <ol class="callouts">
-              <li class="co co--l" style="--y: 22%"><span class="co__n mono">1</span><span class="co__t">Your copy history</span></li>
-              <li class="co co--r" style="--y: 36%"><span class="co__n mono">2</span><span class="co__t">Actions on <span class="nw"><kbd>⌃1</kbd>–<kbd>⌃0</kbd></span></span></li>
-              <li class="co co--l" style="--y: 47%"><span class="co__n mono">3</span><span class="co__t">The result, ready to copy</span></li>
-              <li class="co co--r" style="--y: 97.5%"><span class="co__n mono">4</span><span class="co__t">Credits left</span></li>
+              <li class="co co--l" data-for=".pb__cards" style="--y: 25%"><span class="co__n mono">1</span><span class="co__t">Your copy history</span></li>
+              <li class="co co--r" data-for=".pb__acts" style="--y: 47%"><span class="co__n mono">2</span><span class="co__t">10 actions on <span class="nw"><kbd>⌃1</kbd>–<kbd>⌃0</kbd></span><small>Fix, Shorten, Translate…</small></span></li>
+              <li class="co co--l" data-for=".pb__out" style="--y: 68%"><span class="co__n mono">3</span><span class="co__t">Result, ready to copy</span></li>
+              <li class="co co--r" data-for=".pb__foot" style="--y: 96%"><span class="co__n mono">4</span><span class="co__t">Credits left</span></li>
             </ol>
           </div>
-          <figcaption class="sr">PinchBar panel with four labelled parts: clipboard history, action shortcuts, the result, and the credit balance.</figcaption>
+          <button class="pb-play" type="button" aria-label="Pause animation" hidden><svg viewBox="0 0 16 16" aria-hidden="true"><path class="i-pause" d="M5.5 3.5v9M10.5 3.5v9"/><path class="i-play" d="M5 3.2v9.6L12.8 8z"/></svg></button>
+          <figcaption class="sr">An animated PinchBar panel: a new email is copied, then Fix &amp; Native, Translate, Shorten and Draft Reply each rewrite it. Four labels mark the clipboard history, the action shortcuts, the result and the credit balance.</figcaption>
         </figure>
       </div>
     </section>
@@ -367,13 +388,15 @@
             <p class="price__v">Free</p>
             <p class="price__sub">plus <strong>2,500 bonus AI credits</strong> for new users</p>
             <ul class="ticks">
-              <li>All ten actions and custom actions</li>
+              <li>All 10 actions, plus your own</li>
               <li>Clipboard history with locked secrets</li>
               <li>Selected Text Actions in other apps</li>
               <li>Setapp AI, or Apple Intelligence on-device</li>
             </ul>
-            <a class="btn" href="https://account.setapp.com/get-free/apps/pinchbar">Try PinchBar free <span class="btn__chip" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"/></svg></span></a>
-            <p class="req">macOS 15.6 or later · English interface · 19.8 MB · <a href="https://setapp.com/apps/pinchbar">See PinchBar on Setapp</a></p>
+            <div class="price__foot">
+              <a class="btn" href="https://account.setapp.com/get-free/apps/pinchbar">Try PinchBar free <span class="btn__chip" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"/></svg></span></a>
+              <p class="req">macOS 15.6 or later · English interface · 19.8 MB · <a class="nw" href="https://setapp.com/apps/pinchbar">See PinchBar on Setapp</a></p>
+            </div>
           </article>
           <article class="credits reveal" aria-labelledby="credits-title">
             <h3 id="credits-title">How AI credits work</h3>
@@ -427,7 +450,7 @@
         <header class="faq__head reveal">
           <p class="kicker mono">FAQ</p>
           <h2 id="faq-title" class="h2">Questions, <span class="dim">answered.</span></h2>
-          <p class="sec-sub">Still stuck? <a href="https://setapp.com/apps/pinchbar">Visit PinchBar on Setapp</a>.</p>
+          <p class="sec-sub">Want the full app details? <a href="https://setapp.com/apps/pinchbar">See PinchBar on Setapp</a>.</p>
         </header>
         <div class="faq__list">
           <details name="faq" open>
@@ -518,6 +541,6 @@
     </div>
   </footer>
 
-  <script src="assets/main.js?v=202610051530" defer></script>
+  <script src="assets/main.js?v=202610052000" defer></script>
 </body>
 </html>
