@@ -21,7 +21,7 @@ Then open http://127.0.0.1:4174
 - `raw/` — full-size PNG originals. Gitignored, not committed.
 
 ## Style
-Layout follows marketer.com (thin vertical rules, hairline section dividers, two-tone headlines, split hero, sticky 01–04 index, one dark band, two-column FAQ, pill buttons with a green arrow chip), recoloured with PinchBar pink: accent `#8F4F7D`, accent-soft `#F3BADA`, blush panels `#FBEFF5→#EFCFE0` with grain, plum `#2B1626`, paper `#FFFEFB`, ink `#0D0D0D`, muted `#737373`, rules `#EBEAE6`. Button arrow chip green `#3CCF83` (`--go`); on hover the chip grows with a green ring and the arrow slides through.
+Layout follows marketer.com (thin vertical rules, hairline section dividers, two-tone headlines, split hero, sticky 01–04 index, one dark band, two-column FAQ, pill buttons with a green arrow chip), recoloured with PinchBar pink: accent `#8F4F7D`, accent-soft `#F3BADA`, blush panels `#FBEFF5→#EFCFE0` with grain, plum `#2B1626`, paper `#FFFEFB`, ink `#0D0D0D`, muted `#737373`, rules `#EBEAE6`. Button arrow chip green `#40E56C` (`--go`); on hover the chip grows with a green ring and the arrow slides through.
 
 Type is sans-serif only: Plus Jakarta Sans for headlines and body, JetBrains Mono only for shortcut keys, step numbers and kickers.
 - Headlines (display, h2, h3, card and step titles, trust strip values, stats, the price "Free", FAQ questions, mobile menu links) are weight 600 with negative tracking (display −0.035em, h2 −0.03em, h3 −0.025em) and tight line height (1.02–1.2).
@@ -35,11 +35,12 @@ Type is sans-serif only: Plus Jakarta Sans for headlines and body, JetBrains Mon
 - `v4-motion` (tag) — animated hero panel, green button chips, smoother motion (reveals, menu, FAQ), hero headline fit, tick alignment, pricing/FAQ copy.
 - `v5-cursor` (tag) — hero cursor no longer jumps on click (position via `translate`, press `scale: .9` around the arrow tip).
 - `v6-actions` (tag) — demo actions on one row (2×2 on phones), step 01 tag adds the bonus credits, the 10 built-in actions listed in Compare, new Custom actions section.
+- `v7-setapp-shots` (tag) — buttons green `#40E56C`; Setapp step 1 and 2 screenshots replaced with the PinchBar sign-in page and PinchBar's page in the Setapp app.
 
-## Verification (2026-10-05, re-run for v6-actions)
+## Verification (2026-10-05, re-run for v7-setapp-shots)
 - Full-page screenshots at 360, 768, 1024, 1280 and 1536 in Chromium and WebKit: no horizontal scroll, no console errors, no overflow or clipping in the hero callouts.
 - Menu, demo tabs (incl. arrow keys), action buttons and FAQ clicked through in both engines.
-- Lighthouse mobile (served with gzip via `npx serve`): Performance 100, Accessibility 100, Best Practices 100, SEO 100 (v6-actions; CLS 0, LCP 1.6 s). Reduced motion checked in both engines. With plain `python3 -m http.server` (no compression) Performance is ~89.
+- Lighthouse mobile (served with gzip via `npx serve`): Performance 100, Accessibility 100, Best Practices 100, SEO 100 (v7-setapp-shots; CLS 0, LCP 1.6 s). Reduced motion checked in both engines. With plain `python3 -m http.server` (no compression) Performance is ~89.
 
 ## Screenshots and demo content
 Captured from PinchBar 1.0.16 (Debug build) running in an isolated home folder, so real data was untouched. The UI is dark (the app doesn't follow light mode).
