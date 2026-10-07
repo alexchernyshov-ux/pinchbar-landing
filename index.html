@@ -29,7 +29,7 @@
   <link rel="manifest" href="site.webmanifest">
 
   <link rel="preload" href="assets/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/styles.css?v=202610060100">
+  <link rel="stylesheet" href="assets/styles.css?v=202610070100">
   <script>document.documentElement.classList.add('js');</script>
 
   <script type="application/ld+json">
@@ -133,8 +133,9 @@
               <li class="co co--r" data-for=".pb__foot" style="--y: 96%"><span class="co__n mono">4</span><span class="co__t">Credits left<small>Top up anytime</small></span></li>
             </ol>
           </div>
-          <button class="pb-play" type="button" aria-label="Pause animation" hidden><svg viewBox="0 0 16 16" aria-hidden="true"><path class="i-pause" d="M5.5 3.5v9M10.5 3.5v9"/><path class="i-play" d="M5 3.2v9.6L12.8 8z"/></svg></button>
-          <figcaption class="sr">An animated PinchBar panel: a new email is copied, then Fix &amp; Native, Translate, Shorten and Draft Reply each rewrite it. Four labels mark the clipboard history, the action shortcuts, the result and the credit balance.</figcaption>
+          <span class="pb-hint" aria-hidden="true" hidden>Click the panel to try it</span>
+          <button class="pb-play" type="button" aria-label="Pause animation" hidden><svg viewBox="0 0 16 16" aria-hidden="true"><path class="i-pause" d="M5.5 3.5v9M10.5 3.5v9"/><path class="i-play" d="M5 3.2v9.6L12.8 8z"/><path class="i-resume" d="M3 8a5 5 0 1 0 1.6-3.7M3 2.5v2.8h2.8"/></svg></button>
+          <figcaption class="sr">An animated PinchBar panel: a new email is copied, then Fix &amp; Native, Translate, Shorten and Draft Reply each rewrite it. With a mouse or touch you can pick a card and an action yourself; the animation resumes on its own. Four labels mark the clipboard history, the action shortcuts, the result and the credit balance.</figcaption>
         </figure>
       </div>
     </section>
@@ -374,18 +375,19 @@
             <li><span class="keys"><kbd>⌃</kbd><kbd>0</kbd></span><h3>Draft Reply</h3><p>A short reply that answers what was asked.</p></li>
           </ol>
         </div>
-        <div class="table-wrap reveal">
-          <table class="compare">
-            <caption class="sr">The usual way compared with PinchBar</caption>
-            <thead><tr><th scope="col">The usual way</th><th scope="col">With PinchBar</th></tr></thead>
-            <tbody>
-              <tr><td>Copy, open a chatbot tab, paste, type a prompt</td><td>Press <kbd>⌃</kbd><kbd>C</kbd> and pick an action</td></tr>
-              <tr><td>Rewrite the same prompt every time</td><td>Ten saved actions, each on a shortcut</td></tr>
-              <tr><td>Copy the answer, switch back, paste it in</td><td>Paste Text replaces your selection</td></tr>
-              <tr><td>The thing you copied ten minutes ago is gone</td><td>Your last 200 copies, searchable</td></tr>
-              <tr><td>Keys and tokens sit in plain clipboard history</td><td>Secrets are saved as locked cards</td></tr>
-            </tbody>
-          </table>
+        <div class="flow reveal">
+          <div class="flow__row flow__row--old">
+            <p class="flow__k mono" id="flow-old">The usual way <span>7 steps</span></p>
+            <ol class="flow__steps" aria-labelledby="flow-old">
+              <li>Copy</li><li>Open a chatbot tab</li><li>Paste</li><li>Type a prompt</li><li>Copy the answer</li><li>Switch back</li><li>Paste</li>
+            </ol>
+          </div>
+          <div class="flow__row flow__row--new">
+            <p class="flow__k mono" id="flow-new">With PinchBar <span>3 steps</span></p>
+            <ol class="flow__steps" aria-labelledby="flow-new">
+              <li>Copy</li><li><span class="keys"><kbd>⌃</kbd><kbd>C</kbd></span> Pick an action</li><li>Paste</li>
+            </ol>
+          </div>
         </div>
       </div>
     </section>
@@ -443,6 +445,7 @@
             <p class="price__sub">plus <strong>2,500 bonus AI credits</strong> for new users</p>
             <ul class="ticks">
               <li>All 10 actions, plus your own</li>
+              <li>Share your actions as Markdown, or import a teammate’s</li>
               <li>Clipboard history with locked secrets</li>
               <li>Selected Text Actions in other apps</li>
               <li>Setapp AI, or Apple Intelligence on-device</li>
@@ -455,12 +458,26 @@
           <article class="credits reveal" aria-labelledby="credits-title">
             <h3 id="credits-title">How AI credits work</h3>
             <ol class="credits__list">
-              <li><span class="mono">01</span><p><strong>Setapp AI is the default.</strong> Each action you run with it uses AI credits from your Setapp account.</p></li>
-              <li><span class="mono">02</span><p><strong>Your balance is always visible</strong> at the bottom of the panel. Click Get more to add credits through Setapp.</p></li>
-              <li><span class="mono">03</span><p><strong>Apple Intelligence uses no credits.</strong> On Macs that support it, switch to it in Settings → AI and everything runs on-device.</p></li>
+              <li data-p="setapp"><span class="mono">01</span><p><strong>Setapp AI is the default.</strong> Each action you run with it uses AI credits from your Setapp account.</p></li>
+              <li data-p="setapp"><span class="mono">02</span><p><strong>Your balance is always visible</strong> at the bottom of the panel. Click Get more to add credits through Setapp.</p></li>
+              <li data-p="apple"><span class="mono">03</span><p><strong>Apple Intelligence uses no credits.</strong> On Macs that support it, switch to it in Settings → AI and everything runs on-device.</p></li>
             </ol>
             <figure class="blush credits__shot">
-              <img class="shot" src="assets/shots/settings-provider-620.webp" srcset="assets/shots/settings-provider-620.webp 620w, assets/shots/settings-provider-1240.webp 1240w" sizes="(min-width: 1024px) 480px, 84vw" width="620" height="157" loading="lazy" decoding="async" alt="Settings, AI Provider: Apple Intelligence (on-device, private, free) and Setapp AI+ (included in Setapp), with an option to use Apple Intelligence if Setapp AI is unavailable.">
+              <div class="prov" data-p="setapp">
+                <p class="prov__h" id="prov-h">AI Provider</p>
+                <div class="prov__cards" role="radiogroup" aria-labelledby="prov-h">
+                  <button class="prov__card" type="button" role="radio" aria-checked="false" tabindex="-1" data-p="apple">
+                    <svg class="prov__ic" viewBox="0 0 16 16" aria-hidden="true"><path class="fill" d="M11.2 8.5c0-1.5 1.2-2.2 1.3-2.3-.7-1-1.8-1.2-2.2-1.2-.9-.1-1.8.6-2.3.6-.5 0-1.2-.5-2-.5-1 0-2 .6-2.5 1.6-1.1 1.9-.3 4.6.8 6.1.5.7 1.1 1.6 1.9 1.5.8 0 1.1-.5 2-.5s1.2.5 2 .5c.8 0 1.4-.8 1.9-1.5.6-.9.8-1.7.8-1.7s-1.7-.6-1.7-2.6zM9.8 4c.4-.5.7-1.2.6-1.9-.6 0-1.3.4-1.8.9-.4.4-.7 1.1-.6 1.8.7.1 1.4-.3 1.8-.8z"/></svg>
+                    <b>Apple Intelligence</b><small>On-device · Private · Free</small><span class="prov__check" aria-hidden="true"></span>
+                  </button>
+                  <button class="prov__card" type="button" role="radio" aria-checked="true" data-p="setapp">
+                    <svg class="prov__ic" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 5.2v5.6M5.2 8h5.6"/></svg>
+                    <b>Setapp AI+</b><small>Included in Setapp</small><span class="prov__check" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="prov__fb"><label class="prov__toggle"><span>Use Apple Intelligence if Setapp AI is unavailable</span><input type="checkbox" role="switch" checked></label></div>
+              </div>
+              <figcaption class="prov__info" aria-live="polite"><strong>Setapp AI+</strong> <span>Each action uses AI credits from your Setapp account. If Setapp AI can’t be reached, PinchBar runs the action with Apple Intelligence instead.</span></figcaption>
             </figure>
           </article>
         </div>
@@ -601,6 +618,6 @@
     </div>
   </footer>
 
-  <script src="assets/main.js?v=202610060100" defer></script>
+  <script src="assets/main.js?v=202610070100" defer></script>
 </body>
 </html>

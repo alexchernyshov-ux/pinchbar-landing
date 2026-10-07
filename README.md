@@ -39,11 +39,12 @@ Type is sans-serif only: Plus Jakarta Sans for headlines and body, JetBrains Mon
 - `v8-trial-cards` (tag) — "Your free start goes through Setapp." steps restyled as large rounded cards: blush backdrop on every shot with equal top/side padding, shots flush to the bottom and clipped, numbered circles, bold titles; step 1–2 shots re-cropped tight. Hero callout 4 gains "Top up anytime".
 - `v9-stat-keys` (tag) — Compare stat "Action shortcuts" shows ⌃1 – ⌃0 as two key caps (same style as the actions list) with a spaced dash.
 - `v10-split-keys` (tag) — every ⌃N shortcut outside the app replica is two key caps (⌃ + N, `.keys`); hero callout 2 is three lines (title / ⌃1 – ⌃0 / examples); demo action buttons padding-inline 14px so the row still fits at 1280.
+- `v11-hands-on` (tag) — hero panel is hands-on: click a card or action (drag/scroll the action row, ⌃1–⌃0 while hovering); the loop resumes 7 s after you leave, with a countdown ring on the resume button. Compare table → two step chains (7 steps vs 3). The 10 built-in actions highlight in turn (key press + progress bar; hover takes over). Price card: share/import actions tick. Credits card: AI Provider screenshot → clickable replica (radio cards + fallback switch) that explains the choice and dims the credits notes that don't apply.
 
-## Verification (2026-10-05, re-run for v10-split-keys)
+## Verification (2026-10-05, re-run for v11-hands-on)
 - Full-page screenshots at 360, 768, 1024, 1280 and 1536 in Chromium and WebKit: no horizontal scroll, no console errors, no overflow or clipping in the hero callouts.
 - Menu, demo tabs (incl. arrow keys), action buttons and FAQ clicked through in both engines.
-- Lighthouse mobile (served with gzip via `npx serve`): Performance 100, Accessibility 100, Best Practices 100, SEO 100 (v10-split-keys; CLS 0, LCP 1.6 s). Reduced motion checked in both engines. With plain `python3 -m http.server` (no compression) Performance is ~89.
+- Lighthouse mobile (served with gzip via `npx serve`): Performance 100, Accessibility 100, Best Practices 100, SEO 100 (v11-hands-on; CLS 0, LCP 1.7 s). Reduced motion checked in both engines. With plain `python3 -m http.server` (no compression) Performance is ~89.
 
 ## Screenshots and demo content
 Captured from PinchBar 1.0.16 (Debug build) running in an isolated home folder, so real data was untouched. The UI is dark (the app doesn't follow light mode).
