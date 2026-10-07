@@ -29,7 +29,7 @@
   <link rel="manifest" href="site.webmanifest">
 
   <link rel="preload" href="assets/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/styles.css?v=202610070100">
+  <link rel="stylesheet" href="assets/styles.css?v=202610071900">
   <script>document.documentElement.classList.add('js');</script>
 
   <script type="application/ld+json">
@@ -375,18 +375,37 @@
             <li><span class="keys"><kbd>⌃</kbd><kbd>0</kbd></span><h3>Draft Reply</h3><p>A short reply that answers what was asked.</p></li>
           </ol>
         </div>
-        <div class="flow reveal">
-          <div class="flow__row flow__row--old">
-            <p class="flow__k mono" id="flow-old">The usual way <span>7 steps</span></p>
-            <ol class="flow__steps" aria-labelledby="flow-old">
-              <li>Copy</li><li>Open a chatbot tab</li><li>Paste</li><li>Type a prompt</li><li>Copy the answer</li><li>Switch back</li><li>Paste</li>
+      </div>
+    </section>
+
+    <!-- STEPS -->
+    <section class="section rule-b" aria-labelledby="steps-title">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="kicker mono">The shortcut</p>
+          <h2 id="steps-title" class="h2">Seven steps. <span class="dim">Or three.</span></h2>
+        </header>
+        <div class="kc reveal">
+          <div class="kc__row kc__row--old">
+            <p class="kc__k mono" id="kc-old">The usual way <span>7 steps</span></p>
+            <ol class="kc__steps" aria-labelledby="kc-old">
+              <li class="kc__step"><kbd class="kc__cap">⌘C</kbd><span class="kc__lbl">Copy</span></li>
+              <li class="kc__step"><kbd class="kc__cap">⌘T</kbd><span class="kc__lbl">New chat tab</span></li>
+              <li class="kc__step"><kbd class="kc__cap">⌘V</kbd><span class="kc__lbl">Paste</span></li>
+              <li class="kc__step"><span class="kc__cap kc__cap--type">typing…</span><span class="kc__lbl">Write a prompt</span></li>
+              <li class="kc__step"><kbd class="kc__cap">⌘C</kbd><span class="kc__lbl">Copy the answer</span></li>
+              <li class="kc__step"><kbd class="kc__cap">⌘⇥</kbd><span class="kc__lbl">Switch back</span></li>
+              <li class="kc__step"><kbd class="kc__cap">⌘V</kbd><span class="kc__lbl">Paste</span></li>
             </ol>
           </div>
-          <div class="flow__row flow__row--new">
-            <p class="flow__k mono" id="flow-new">With PinchBar <span>3 steps</span></p>
-            <ol class="flow__steps" aria-labelledby="flow-new">
-              <li>Copy</li><li><span class="keys"><kbd>⌃</kbd><kbd>C</kbd></span> Pick an action</li><li>Paste</li>
+          <div class="kc__row kc__row--new">
+            <p class="kc__k mono" id="kc-new">With PinchBar <span>3 steps</span></p>
+            <ol class="kc__steps" aria-labelledby="kc-new">
+              <li class="kc__step"><kbd class="kc__cap">⌘C</kbd><span class="kc__lbl">Copy</span></li>
+              <li class="kc__step"><span class="sr-only">Press an action shortcut, for example Control 4 to Summarize</span><span class="kc__flip" aria-hidden="true"><kbd class="kc__cap" data-kc-key>⌃4</kbd></span><span class="kc__lbl" aria-hidden="true" data-kc-name>Summarize</span></li>
+              <li class="kc__step"><kbd class="kc__cap">⌘V</kbd><span class="kc__lbl">Paste</span></li>
             </ol>
+            <p class="kc__hint">Any action has its own key, <span class="keys"><kbd>⌃</kbd><kbd>1</kbd></span>–<span class="keys"><kbd>⌃</kbd><kbd>0</kbd></span>. Or press <span class="keys"><kbd>⌃</kbd><kbd>C</kbd></span> to pick from the list.</p>
           </div>
         </div>
       </div>
@@ -618,6 +637,6 @@
     </div>
   </footer>
 
-  <script src="assets/main.js?v=202610070100" defer></script>
+  <script src="assets/main.js?v=202610071900" defer></script>
 </body>
 </html>
