@@ -1,5 +1,5 @@
 // PinchBar landing — mobile menu, scroll reveal, lazy image fade, chapter index, FAQ accordion, hero panel loop + hands-on mode,
-// compare chains, action-key cycle, AI provider switcher, demo.
+// step key caps, action-key cycle, AI provider switcher, demo.
 (function () {
   'use strict';
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -116,9 +116,29 @@
   }
 
   // ---------- Hero: looping panel animation (copy arrives, actions run); visitors can take over ----------
-  (function heroPanel() {
-    var pb = document.querySelector('.pb');
-    if (!pb) return;
+  // The final CTA gets a live copy of the same panel (its screenshot stays as the no-JS fallback).
+  (function cloneFinalPanel() {
+    var src = document.querySelector('.hero__shot .pb');
+    var fig = document.querySelector('.final__shot');
+    if (!src || !fig) return;
+    var pin = document.createElement('div');
+    pin.className = 'shot-pin';
+    pin.appendChild(src.cloneNode(true));
+    var img = fig.querySelector('img');
+    if (img) img.remove();
+    fig.insertBefore(pin, fig.firstChild);
+    ['.pb-hint', '.pb-play'].forEach(function (sel) {
+      var el = document.querySelector('.hero__shot ' + sel);
+      if (el) fig.insertBefore(el.cloneNode(true), pin.nextSibling);
+    });
+    var cap = document.createElement('figcaption');
+    cap.className = 'sr';
+    cap.textContent = 'The same animated PinchBar panel as at the top of the page: pick a card and an action to try it.';
+    fig.appendChild(cap);
+  })();
+
+  document.querySelectorAll('.pb').forEach(function heroPanel(pb) {
+    var fig = pb.closest('figure');
     var pin = pb.parentElement;
     var callouts = pin.querySelectorAll('.co[data-for]');
 
@@ -154,8 +174,8 @@
     var toast = pb.querySelector('.pb__toast');
     var cursor = pb.querySelector('.pb__cursor');
     var tools = pb.querySelectorAll('.pb__tools span');
-    var btn = document.querySelector('.pb-play');
-    var hint = document.querySelector('.pb-hint');
+    var btn = fig.querySelector('.pb-play');
+    var hint = fig.querySelector('.pb-hint');
 
     // Pre-written results for each clipboard card × action (no live AI).
     var RESULTS = [{
@@ -468,12 +488,48 @@
     document.addEventListener('visibilitychange', function () { autoPaused = !onScreen || document.hidden; });
     requestAnimationFrame(idleTick);
     start();
-  })();
-
-  // ---------- Compare: step chains build in sequence ----------
-  document.querySelectorAll('.flow__steps').forEach(function (ol) {
-    Array.prototype.forEach.call(ol.children, function (li, i) { li.style.setProperty('--i', i); });
   });
+
+  // ---------- Steps: PinchBar caps press one at a time (1 → 2 → 3); step 2 flips to the next ⌃N action each loop ----------
+  (function keyCaps() {
+    var row = document.querySelector('.kc__row--new');
+    if (!row || reduceMotion || !('IntersectionObserver' in window)) return;
+    var steps = row.querySelectorAll('.kc__step');
+    var key = row.querySelector('[data-kc-key]'), name = row.querySelector('[data-kc-name]');
+    var faces = [['⌃4', 'Summarize'], ['⌃1', 'Fix & Native'], ['⌃5', 'Translate'], ['⌃8', 'Shorten'], ['⌃0', 'Draft Reply']];
+    var face = 0, loop = 0, timer = 0, run = false, gen = 0;
+    function setOn(i) { steps.forEach(function (s, j) { s.classList.toggle('is-on', j === i); }); }
+    function press(i) {
+      setOn(i);
+      var cap = steps[i].querySelector('.kc__cap');
+      cap.classList.remove('is-press'); void cap.offsetWidth; cap.classList.add('is-press');
+    }
+    function flip(done) {
+      face = (face + 1) % faces.length;
+      name.style.opacity = 0;
+      if (!key.animate) { key.textContent = faces[face][0]; name.textContent = faces[face][1]; name.style.opacity = ''; done(); return; }
+      key.animate([{ transform: 'rotateX(0)' }, { transform: 'rotateX(90deg)' }], { duration: 420, easing: 'cubic-bezier(.45,0,.55,1)' }).onfinish = function () {
+        key.textContent = faces[face][0]; name.textContent = faces[face][1]; name.style.opacity = '';
+        key.animate([{ transform: 'rotateX(-90deg)' }, { transform: 'rotateX(0)' }], { duration: 640, easing: 'cubic-bezier(.22,1,.36,1)' }).onfinish = function () { timer = setTimeout(done, 120); };
+      };
+    }
+    function tick(i) {
+      if (!run) return;
+      if (i === 3) { setOn(-1); loop++; timer = setTimeout(function () { tick(0); }, 1600); return; }
+      if (i === 1 && loop > 0) {
+        setOn(1);
+        var g = gen;
+        flip(function () { if (!run || g !== gen) return; press(1); timer = setTimeout(function () { tick(2); }, 900); });
+        return;
+      }
+      press(i); timer = setTimeout(function () { tick(i + 1); }, 900);
+    }
+    new IntersectionObserver(function (entries) {
+      var vis = entries[0].isIntersecting;
+      if (vis && !run) { run = true; row.classList.add('is-run'); timer = setTimeout(function () { tick(0); }, 500); }
+      else if (!vis && run) { run = false; gen++; clearTimeout(timer); row.classList.remove('is-run'); setOn(-1); }
+    }, { threshold: 0.5 }).observe(row);
+  })();
 
   // ---------- 10 built-in actions: each key pair "presses" in turn ----------
   (function actsCycle() {
